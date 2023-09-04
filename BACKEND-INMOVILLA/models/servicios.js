@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      vivienda_servicios.belongsTo(models.servicios);
-      servicios.hasMany(vivienda_servicios);
+      // vivienda_servicios.belongsTo(models.servicios);
+      // servicios.hasMany(vivienda_servicios);
 
-      contrato_servicios.belongsTo(models.servicios);
-      servicios.hasMany(contrato_servicios);
+      // contrato_servicios.belongsTo(models.servicios);
+      // servicios.hasMany(contrato_servicios);
     }
   }
   servicios.init({

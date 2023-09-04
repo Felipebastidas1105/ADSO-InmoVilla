@@ -11,20 +11,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      contrato_servicios.belongsTo(models.contratos);
-      contratos.hasMany(contrato_servicios)
+      // contrato_servicios.belongsTo(models.contratos);
+      // contratos.hasMany(contrato_servicios)
 
-      contrato_dueños.belongsTo(models.contratos);
-      contratos.hasMany(contrato_dueños)
+      // contrato_dueños.belongsTo(models.contratos);
+      // contratos.hasMany(contrato_dueños)
       
-      solicitud_contratos.belongsTo(models.contratos);
-      contratos.hasMany(solicitud_contratos)
+      // solicitud_contratos.belongsTo(models.contratos);
+      // contratos.hasMany(solicitud_contratos)
 
-      pago_arriendos.belongsTo(models.contratos);
-      contratos.hasMany(pago_arriendos);
+      // pago_arriendos.belongsTo(models.contratos);
+      // contratos.hasMany(pago_arriendos);
 
-      contrato_coarrendatarios.belongsTo(models.contratos);
-      contratos.hasMany(contrato_coarrendatarios)
+      // contrato_coarrendatarios.belongsTo(models.contratos);
+      // contratos.hasMany(contrato_coarrendatarios)
     }
   }
   contrato.init({

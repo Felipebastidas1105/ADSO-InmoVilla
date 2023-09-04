@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      solicitud_contrato_coarrendatarios.belongsTo(models.solicitud_contratos);
-      solicitud_contratos.hasMany(solicitud_contrato_coarrendatarios)
+      // solicitud_contrato_coarrendatarios.belongsTo(models.solicitud_contratos);
+      // solicitud_contratos.hasMany(solicitud_contrato_coarrendatarios)
     }
   }
   solicitud_contrato.init({

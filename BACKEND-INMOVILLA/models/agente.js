@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      viviendas.belongsTo(models.agentes);
-      agentes.hasMany(viviendas)
+      // models.viviendas.BelongsTo(models.agente);
+      // agente.hasMany(viviendas)
     
     }
   }

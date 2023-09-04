@@ -1,20 +1,17 @@
-// npx sequelize model:generate --name administrador --attributes Id_Admin:integer,Nombre_Admin:string,Email_Admin:string,Telefono_Admin:string
-// Including dependencies 
+
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const morgar = require('morgan');
+const morgan = require('morgan'); // El nombre correcto de la dependencia es "morgan" en lugar de "morgar".
 
-app.set('port', process.env.PORT || 400)
+app.set('port', process.env.PORT || 4000); // Debes usar 4000 en lugar de 400. Además, cierra correctamente el paréntesis de la función set.
 
-app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(morgar('dev'));
+app.use(morgan('dev')); // Cambia "morgar" a "morgan" para utilizar la dependencia correcta.
 
-app.get('/', (req,res)=>{
-    res.send({title:"Hola inmovilla"})
-})
+app.use('/api/v1/admin', require('./api/v1/routes/administrador.routes'));
 
-app.listen(app.get('port'), () =>{
+app.listen(app.get('port'), () => {
     console.log(`Server running on localhost:${app.get('port')}`);
 });

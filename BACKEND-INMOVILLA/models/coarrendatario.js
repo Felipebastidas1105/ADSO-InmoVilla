@@ -13,11 +13,11 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      contrato_coarendatarios.belongsTo(models.coarrendatarios);
-      coarrendatarios.hasMany(contrato_coarendatarios);
+      // contrato_coarendatarios.belongsTo(models.coarrendatario);
+      // coarrendatario.hasMany(contrato_coarendatarios);
 
-      solicitud_contrato_coarrendatarios.belongsTo(models.coarrendatarios);
-      coarrendatarios.hasMany(solicitud_contrato_coarrendatarios)
+      // solicitud_contrato_coarrendatarios.belongsTo(models.coarrendatarios);
+      // coarrendatarios.hasMany(solicitud_contrato_coarrendatarios)
     }
   }
   coarrendatario.init({

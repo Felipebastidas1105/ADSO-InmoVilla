@@ -1,17 +1,17 @@
 // controllers/administradorController.js
 const administradorService = require('../services/administradorService');
 
-class AdministradorController {
-  async getAll(req, res) {
+
+  const getAll = async (req, res) => {
     try {
-      const administradores = await administradorService.getAllAdministradores();
-      res.json(administradores);
+      let admins  = await administradorService.getAll();
+      res.status(200).send({status:"OK", data: admins});
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
   }
 
-  async getAdministrador(req, res) {
+  const getAdministrador = async (req, res) => {
     const { id } = req.params;
     try {
       const administrador = await administradorService.getAdministradorById(id);
@@ -24,7 +24,7 @@ class AdministradorController {
     }
   }
 
-  async createAdministrador(req, res) {
+  const createAdministrador = async (req, res) =>  {
     const data = req.body;
     try {
       const nuevoAdministrador = await administradorService.createAdministrador(data);
@@ -34,7 +34,7 @@ class AdministradorController {
     }
   }
 
-  async updateAdministrador(req, res) {
+  const updateAdministrador = async (req, res) =>  {
     const { id } = req.params;
     const data = req.body;
     try {
@@ -45,7 +45,7 @@ class AdministradorController {
     }
   }
 
-  async deleteAdministrador(req, res) {
+  const deleteAdministrador = async (req, res) =>  {
     const { id } = req.params;
     try {
       await administradorService.deleteAdministrador(id);
@@ -54,6 +54,8 @@ class AdministradorController {
       res.status(500).json({ error: error.message });
     }
   }
+
+module.exports = {
+
 }
 
-module.exports = new AdministradorController();
