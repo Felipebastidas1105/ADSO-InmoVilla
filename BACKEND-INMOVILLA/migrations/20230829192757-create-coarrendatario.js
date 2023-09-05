@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('coarrendatarios', {
+    await queryInterface.createTable('jointtenants', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Cedula: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       Nombre: {
         type: Sequelize.STRING
@@ -35,6 +35,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('coarrendatarios');
+    await queryInterface.dropTable('Jointtenants');
   }
 };

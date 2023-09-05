@@ -8,8 +8,8 @@ const router = Router()
 
 router.get('/', administradoController.getAll)
 router.get('/:adminId', administradoController.getAdministrator)
-router.post('/',administradoController.createAdministrador)
-router.put('/:userId',administradoController.updateAdministrador)
-router.delete('/:userId',administradoController.deleteAdministrador)
+router.post('/',administradoController.createAdministrator)
+router.put('/:adminId',administradoController.updateAdministrador)
+router.delete('/:adminId',administradoController.deleteAdministrador)
 
 module.exports = router;
