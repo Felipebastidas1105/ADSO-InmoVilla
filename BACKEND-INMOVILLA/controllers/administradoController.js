@@ -4,10 +4,10 @@ const administradorService = require('../services/administradorService');
 
   const getAll = async (req, res) => {
     try {
-      let admins  = await administradorService.getAll();
+      const admins  = await administradorService.getAll();
       res.status(200).send({status:"OK", data: admins});
     } catch (error) {
-      res.status(500).json({ error: error.message });
+      res.status(500).json({ error: error.message }); 
     }
   }
 
@@ -56,6 +56,10 @@ const administradorService = require('../services/administradorService');
   }
 
 module.exports = {
-
+  getAll,
+  getAdministrador,
+  createAdministrador,
+  updateAdministrador,
+  deleteAdministrador
 }
 

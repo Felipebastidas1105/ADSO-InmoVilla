@@ -1,5 +1,5 @@
 
-const { db } = require('../models'); 
+const  db  = require('../models'); 
 // const administrator = require('../models/administrator');
 
   const getAll = async() => {
@@ -35,5 +35,12 @@ const { db } = require('../models');
     return await admin.destroy();
   }
 
+  module.exports = {
+    getAll,
+    getAdministrador,
+    createAdministrador,
+    updateAdministrador,
+    deleteAdministrador,
+  }
 
 
