@@ -11,8 +11,13 @@ const  db  = require('../models');
     }
   }
 
-  const getAdministrador = async() => {
-    return await administrador.findByPk(id);
+  const getAdministrator = async(id) => {
+    try {
+      let admin = await db.Administrator.findByPk(id);
+      return admin
+    } catch (error) {
+      
+    }
   }
 
   const createAdministrador = async() =>  {
@@ -37,7 +42,7 @@ const  db  = require('../models');
 
   module.exports = {
     getAll,
-    getAdministrador,
+    getAdministrator,
     createAdministrador,
     updateAdministrador,
     deleteAdministrador,

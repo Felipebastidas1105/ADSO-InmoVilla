@@ -7,7 +7,7 @@ const router = Router()
 
 
 router.get('/', administradoController.getAll)
-router.get('/:userId', administradoController.getAdministrador)
+router.get('/:adminId', administradoController.getAdministrator)
 router.post('/',administradoController.createAdministrador)
 router.put('/:userId',administradoController.updateAdministrador)
 router.delete('/:userId',administradoController.deleteAdministrador)

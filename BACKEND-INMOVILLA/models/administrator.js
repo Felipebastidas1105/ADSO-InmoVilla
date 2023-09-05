@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Administrator.init({
-    Id_Admin: DataTypes.INTEGER,
     Nombre_Admin: DataTypes.STRING,
     Email_Admin: DataTypes.STRING,
     Telefono_Admin: DataTypes.STRING

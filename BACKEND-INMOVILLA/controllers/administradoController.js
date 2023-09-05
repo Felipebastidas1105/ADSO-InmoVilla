@@ -11,14 +11,11 @@ const administradorService = require('../services/administradorService');
     }
   }
 
-  const getAdministrador = async (req, res) => {
-    const { id } = req.params;
+  const getAdministrator = async (req, res) => {
+    let  id = req.params.adminId;
     try {
-      const administrador = await administradorService.getAdministradorById(id);
-      if (!administrador) {
-        return res.status(404).json({ message: 'Administrador no encontrado' });
-      }
-      res.json(administrador);
+      const administrador = await administradorService.getAdministrator(id);
+      res.status(200).send({status:"OK", data:administrador})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -57,7 +54,7 @@ const administradorService = require('../services/administradorService');
 
 module.exports = {
   getAll,
-  getAdministrador,
+  getAdministrator,
   createAdministrador,
   updateAdministrador,
   deleteAdministrador
