@@ -2,8 +2,6 @@
 const {
   Model
 } = require('sequelize');
-const contrato = require('./Contract');
-const solicitud_contrato = require('./solicitud_contrato');
 module.exports = (sequelize, DataTypes) => {
   class jointTenant extends Model {
     /**
@@ -12,6 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      jointTenant.belongsToMany(models.ContractRequest,{
+        through:"RequestContract_jointTenant",
+        as:"ContractRequest"
+      })
+
+      jointTenant.belongsToMany(models.Contract,{
+        through:"contract_jointTenant",
+        as:"jointTenats"
+      })
       // define association here
       // contrato_coarendatarios.belongsTo(models.coarrendatario);
       // coarrendatario.hasMany(contrato_coarendatarios);

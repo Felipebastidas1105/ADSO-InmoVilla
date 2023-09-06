@@ -7,9 +7,9 @@ const router = Router()
 
 
 router.get('/', administradoController.getAll)
-router.get('/:adminId', administradoController.getAdministrator)
-router.post('/',administradoController.createAdministrator)
-router.put('/:adminId',administradoController.updateAdministrador)
-router.delete('/:adminId',administradoController.deleteAdministrador)
+router.get('/:adminId', administradoController.get)
+router.post('/',administradoController.create)
+router.put('/:adminId',administradoController.update)
+router.delete('/:adminId',administradoController.destroy)
 
 module.exports = router;

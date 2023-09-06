@@ -11,41 +11,41 @@ const administradorService = require('../services/administratorService');
     }
   }
 
-  const getAdministrator = async (req, res) => {
+  const get= async (req, res) => {
     let  id = req.params.adminId;
     try {
-      const administrador = await administradorService.getAdministrator(id);
+      const administrador = await administradorService.get(id);
       res.status(200).send({status:"OK", data:administrador})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
   }
 
-  const createAdministrator = async (req, res) =>  {
+  const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await administradorService.createAdministrator(data.Nombre_Admin, data.Email_Admin, data.Telefono_Admin);
+      const nuevoAdministrador = await administradorService.create(data.Nombre_Admin, data.Email_Admin, data.Telefono_Admin);
       res.status(201).json(nuevoAdministrador);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
   }
 
-  const updateAdministrador = async (req, res) =>  {
+  const update= async (req, res) =>  {
     let id  = req.params.adminId;
     const data = req.body;
     try {
-      const administradorActualizado = await administradorService.updateAdministrador(id, data.Nombre_Admin, data.Email_Admin, data.Telefono_Admin);
+      const administradorActualizado = await administradorService.update(id, data.Nombre_Admin, data.Email_Admin, data.Telefono_Admin);
       res.status(200).send({status:"OK", data:administradorActualizado})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
   }
 
-  const deleteAdministrador = async (req, res) =>  {
+  const destroy = async (req, res) =>  {
     let id = req.params.adminId;
     try {
-      const deletedAdmin = await administradorService.deleteAdministrador(id);
+      const deletedAdmin = await administradorService.destroy(id);
       res.status(204).send({status:"OK",data:deletedAdmin});
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -54,9 +54,9 @@ const administradorService = require('../services/administratorService');
 
 module.exports = {
   getAll,
-  getAdministrator,
-  createAdministrator,
-  updateAdministrador,
-  deleteAdministrador
+  get,
+  create,
+  update,
+  destroy
 }
 

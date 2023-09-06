@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
+      Owner.belongsToMany(models.Home,{
+        through: "home_owner",
+        as:'homes'
+      })
       // define association here
       // vivienda_dueños.belongsTo(models.dueños);
       // dueños.hasMany(vivienda_dueños);

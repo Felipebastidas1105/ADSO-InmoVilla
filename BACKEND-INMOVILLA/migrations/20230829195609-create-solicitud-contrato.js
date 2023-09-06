@@ -2,7 +2,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('solicitud_contratos', {
+    await queryInterface.createTable('contractRequests', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -37,10 +37,24 @@ module.exports = {
         type: Sequelize.STRING
       },
       FKCedula_Inquilino: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"Tenants",
+            id:"id"
+          }
+        }
       },
       FKCodigo_Contrato: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"Contracts",
+            id:"id"
+          }
+        }
       },
       createdAt: {
         allowNull: false,
@@ -53,6 +67,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('solicitud_contratos');
+    await queryInterface.dropTable('contractRequests');
   }
 };

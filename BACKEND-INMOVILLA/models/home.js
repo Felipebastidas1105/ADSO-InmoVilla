@@ -3,44 +3,42 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Housing extends Model {
+  class Home extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
-      // vivivenda_servicios.belongsTo(models.viviendas);
-      // viviendas.hasMany(vivivenda_servicios)
+      Home.belongsTo(models.Agent);
+      models.Agent.hasMany(Home);
 
-      // vivienda_dueño.belongsTo(models.vivendas);
-      // vivendas.hasMany(vivenda_dueño)
-
-      // contratos.belongsTo(models.viviendas);
-      // viviendas.hasMany(contratos)
+      Home.belongsToMany(models.Owner,{
+        throungh: "home_owner",
+        as:'agents'
+      })
     }
   }
-  Housing.init({
+  Home.init({
     Codigo_Vivienda: DataTypes.INTEGER,
     Ubicacion: DataTypes.STRING,
-    Cant_Cuartos: DataTypes.INTEGER,
+    Cant_Cuartos: DataTypes.STRING,
     Caracteristicas_Extra: DataTypes.STRING,
     Tiene_Servicios_Incluidos: DataTypes.STRING,
     Tipo_Objeto: DataTypes.STRING,
-    Area_Inmueble: DataTypes.DOUBLE,
+    Area_Inmueble: DataTypes.STRING,
     Precio: DataTypes.DOUBLE,
     Descripcion: DataTypes.STRING,
     Tiene_Garaje_Moto: DataTypes.STRING,
     Tipo_Vivienda: DataTypes.STRING,
     Tiene_Garaje_Carro: DataTypes.STRING,
     Tiene_Patio: DataTypes.STRING,
-    Cant_Baños: DataTypes.INTEGER,
-    Precio_Venta: DataTypes.DOUBLE,
+    Cant_Baños: DataTypes.STRING,
+    Precio_Venta: DataTypes.STRING,
     FKId_Agente: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'Housing',
+    modelName: 'Home',
   });
-  return Housing;
+  return Home;
 };

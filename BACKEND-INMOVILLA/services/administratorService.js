@@ -11,7 +11,7 @@ const getAll = async () => {
   }
 }
 
-const getAdministrator = async (id) => {
+const get = async (id) => {
   try {
     let admin = await db.Administrator.findByPk(id);
     return admin
@@ -20,7 +20,7 @@ const getAdministrator = async (id) => {
   }
 }
 
-const createAdministrator = async (Nombre_Admin, Email_Admin, Telefono_Admin) => {
+const create = async (Nombre_Admin, Email_Admin, Telefono_Admin) => {
   try {
     let newAdmin = await db.Administrator.create({
       Nombre_Admin,
@@ -33,7 +33,7 @@ const createAdministrator = async (Nombre_Admin, Email_Admin, Telefono_Admin) =>
   }
 }
 
-const updateAdministrador = async (id,Nombre_Admin,Email_Admin,Telefono_Admin) => {
+const update = async (id,Nombre_Admin,Email_Admin,Telefono_Admin) => {
   try {
     const admin = await db.Administrator.update({
       Nombre_Admin,
@@ -54,7 +54,7 @@ const updateAdministrador = async (id,Nombre_Admin,Email_Admin,Telefono_Admin) =
   
 }
 
-const deleteAdministrador = async (id) => {
+const destroy = async (id) => {
   try {
     let deletedAdmin = await db.Administrator.destroy({
       where:{
@@ -69,10 +69,10 @@ const deleteAdministrador = async (id) => {
 
 module.exports = {
   getAll,
-  getAdministrator,
-  createAdministrator,
-  updateAdministrador,
-  deleteAdministrador,
+  get,
+  create,
+  update,
+  destroy,
 }
 
 
