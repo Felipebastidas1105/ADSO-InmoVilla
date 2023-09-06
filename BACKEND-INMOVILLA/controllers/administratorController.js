@@ -1,5 +1,5 @@
 // controllers/administradorController.js
-const administradorService = require('../services/administradorService');
+const administradorService = require('../services/administratorService');
 
 
   const getAll = async (req, res) => {

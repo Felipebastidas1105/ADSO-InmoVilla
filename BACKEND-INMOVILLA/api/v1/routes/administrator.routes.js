@@ -1,7 +1,7 @@
 // const db = require('../../../models')
 const {Router} = require('express')
-const AdminController = require('../../../controllers/administradoController')
-const administradoController = require('../../../controllers/administradoController')
+const AdminController = require('../../../controllers/administratorController')
+const administradoController = require('../../../controllers/administratorController')
 
 const router = Router()
 
