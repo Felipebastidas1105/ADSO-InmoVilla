@@ -30,8 +30,15 @@ module.exports = {
       Vigencia: {
         type: Sequelize.DATE
       },
-      FKCedula_Dueño: {
-        type: Sequelize.INTEGER
+      OwnerId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"Owners",
+            key:"id"
+          }
+        }
       },
       FKCodigo_Contrato: {
         type: Sequelize.INTEGER

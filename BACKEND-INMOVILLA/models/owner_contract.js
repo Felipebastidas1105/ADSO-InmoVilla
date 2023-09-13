@@ -11,6 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      OwnerContract.belongsTo(models.Owner);
+      models.Owner.hasMany(OwnerContract);
     }
   }
   OwnerContract.init({
