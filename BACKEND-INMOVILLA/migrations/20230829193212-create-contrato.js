@@ -33,8 +33,25 @@ module.exports = {
       Servicios_Incluidos: {
         type: Sequelize.STRING
       },
-      Codigo_Vivienda: {
-        type: Sequelize.INTEGER
+      CodigoViviendaId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"Homes",
+            key:"id",
+          }
+        }
+      },
+      OwnerContractId: {
+         type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"owner_contracts",
+            key:"id"
+          }
+        }
       },
       createdAt: {
         allowNull: false,

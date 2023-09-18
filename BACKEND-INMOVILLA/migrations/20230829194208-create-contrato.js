@@ -33,8 +33,11 @@ module.exports = {
       Servicios_Incluidos: {
         type: Sequelize.STRING
       },
-      FKCodigo_Vivienda: {
+      CodigoViviendaId: {
         type: Sequelize.INTEGER
+      },
+      OwnerContractId: {
+        type: Sequelize.INTEGER //No funciona
       },
       createdAt: {
         allowNull: false,
