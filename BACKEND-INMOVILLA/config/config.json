@@ -1,5 +1,12 @@
 {
   "development": {
+    "username": "postgres",
+    "password": "postgres",
+    "database": "inmovilla",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "development1": {
     "username": "root",
     "password": null,
     "database": "inmovilla",
