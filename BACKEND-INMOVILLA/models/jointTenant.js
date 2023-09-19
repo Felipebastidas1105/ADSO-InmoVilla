@@ -16,8 +16,8 @@ module.exports = (sequelize, DataTypes) => {
       })
 
       jointTenant.belongsToMany(models.Contract,{
-        through:"contract_jointTenant",
-        as:"jointTenats"
+        through:"contractJointTenant",
+        as:"contracts"
       })
       // define association here
       // contrato_coarendatarios.belongsTo(models.coarrendatario);
