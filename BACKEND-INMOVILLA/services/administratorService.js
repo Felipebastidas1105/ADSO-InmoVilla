@@ -25,7 +25,7 @@ const create = async (Nombre_Admin, Email_Admin, Telefono_Admin) => {
     let newAdmin = await db.Administrator.create({
       Nombre_Admin,
       Email_Admin,
-      Telefono_Admin
+      Telefono_Admin,
     });
     return newAdmin
   } catch (error) {

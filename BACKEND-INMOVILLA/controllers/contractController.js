@@ -22,8 +22,8 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await contractService.create(data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
-      res.status(201).json(nuevoAdministrador);
+      const newContract = await contractService.create(data.Cedula, data.Nombre, data.Fecha_Nac,data.Telefono,data.Email,data.Fecha_Pago,data.Estado_Contrato,data.servicios_Incluidos,data.Codigo_Vivienda,data.OwnerContractId);
+      res.status(201).json(newContract);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

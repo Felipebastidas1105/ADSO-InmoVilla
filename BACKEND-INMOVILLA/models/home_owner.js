@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   home_owner.init({
-    id: DataTypes.INTEGER,
-    id: DataTypes.INTEGER
+    ownerId: DataTypes.INTEGER,
+    homeId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'home_owner',
