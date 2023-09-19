@@ -3,7 +3,7 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class contract_jointTenant extends Model {
+  class contractJointTenant extends Model {
     /**
      * Helper method for defining associations.
      * This method is not a part of Sequelize lifecycle.
@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-  contract_jointTenant.init({
+  contractJointTenant.init({
     contractId: DataTypes.INTEGER,
     jointTenant: DataTypes.INTEGER
   }, {
     sequelize,
-    modelName: 'contract_jointTenant',
+    modelName: 'contractJointTenant',
   });
-  return contract_jointTenant;
+  return contractJointTenant;
 };
