@@ -1,9 +1,9 @@
-const agentService = require('../services/tenantService');
+const tenantService = require('../services/tenantService');
 
 const getAll = async (req, res) => {
     try {
-      const agents  = await agentService.getAll();
-      res.status(200).send({status:"OK", data: agents});
+      const tenantServices  = await tenantService.getAll();
+      res.status(200).send({status:"OK", data: tenantServices});
     } catch (error) {
       res.status(500).json({ error: error.message }); 
     }
@@ -12,8 +12,8 @@ const getAll = async (req, res) => {
   const get = async (req, res) => {
     let  id = req.params.id;
     try {
-      const agent = await agentService.get(id);
-      res.status(200).send({status:"OK", data:agent})
+      const tenantService = await tenantService.get(id);
+      res.status(200).send({status:"OK", data:tenantService})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -22,8 +22,8 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await agentService.create(data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
-      res.status(201).json(nuevoAdministrador);
+      const newTenant = await tenantService.create(data.Cedula, data.Nombre, data.Fecha_Nac,data.Telefono,data.Email,data.Estado,data.Direccion);
+      res.status(201).json(newTenant);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await agentService.update(id, data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
+      const updated = await tenantService.update(id, data.Cedula, data.Nombre, data.Fecha_Nac,data.Telefono,data.Email,data.Estado,data.Direccion);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -43,8 +43,8 @@ const getAll = async (req, res) => {
   const destroy = async (req, res) =>  {
     let id = req.params.id;
     try {
-      const deletedAdmin = await agentService.destroy(id);
-      res.status(204).send({status:"OK",data:deletedAdmin});
+      const deletedTenant = await tenantService.destroy(id);
+      res.status(204).send({status:"OK",data:deletedTenant});
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

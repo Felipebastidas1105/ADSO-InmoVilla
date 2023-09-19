@@ -1,9 +1,9 @@
-const ownerService = require('../services/ownerService');
+const typeTargetServices = require('../services/typeTargetServices');
 
 const getAll = async (req, res) => {
     try {
-      const ownerServices  = await ownerService.getAll();
-      res.status(200).send({status:"OK", data: ownerServices});
+      const typeTargets  = await typeTargetServices.getAll();
+      res.status(200).send({status:"OK", data: typeTargets});
     } catch (error) {
       res.status(500).json({ error: error.message }); 
     }
@@ -12,8 +12,8 @@ const getAll = async (req, res) => {
   const get = async (req, res) => {
     let  id = req.params.id;
     try {
-      const ownerService = await ownerService.get(id);
-      res.status(200).send({status:"OK", data:ownerService})
+      const typeTarget = await typeTargetServices.get(id);
+      res.status(200).send({status:"OK", data:typeTarget})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -22,8 +22,8 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const newownerService = await ownerService.create(data.Cedula_Dueño, data.Nombre, data.Fecha_Nac_Dueño,data.Telefono_Dueño,data.Estado_Dueño,data.Email_Dueño,data.Direccion_Dueño);
-      res.status(201).json(newownerService);
+      const newTypeTarget = await typeTargetServices.create(data.codTipoVivienda,data.nombre);
+      res.status(201).json(newTypeTarget);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await ownerService.update(id, data.Cedula_Dueño, data.Nombre, data.Fecha_Nac_Dueño,data.Telefono_Dueño,data.Estado_Dueño,data.Email_Dueño,data.Direccion_Dueño);
+      const updated = await typeTargetServices.update(id, data.codTipoVivienda, data.nombre);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -43,8 +43,8 @@ const getAll = async (req, res) => {
   const destroy = async (req, res) =>  {
     let id = req.params.id;
     try {
-      const deletedOwner = await ownerService.destroy(id);
-      res.status(204).send({status:"OK",data:deletedOwner});
+      const deletedTypeTarget = await typeTargetServices.destroy(id);
+      res.status(204).send({status:"OK",data:deletedTypeTarget});
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -57,4 +57,3 @@ module.exports = {
   update,
   destroy
 }
-

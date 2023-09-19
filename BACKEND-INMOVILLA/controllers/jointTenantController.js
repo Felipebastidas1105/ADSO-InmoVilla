@@ -27,8 +27,7 @@ const getAll = async (req, res) => {
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
-  }
-
+  } 
   const update = async (req, res) =>  {
     let id  = req.params.id;
     const data = req.body;
