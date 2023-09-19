@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Contract.belongsToMany(models.jointTenant,{
-        through:"contract_jointTenant",    
+        through:"contractJointTenant",    
           as:"jointTennants"
         })
 

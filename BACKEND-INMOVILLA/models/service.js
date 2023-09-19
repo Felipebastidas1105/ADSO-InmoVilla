@@ -14,6 +14,10 @@ module.exports = (sequelize, DataTypes) => {
       // vivienda_servicios.belongsTo(models.servicios);
       // servicios.hasMany(vivienda_servicios);
 
+      Service.belongsToMany(models.Home,{
+        through:"HomeService",
+        as:"homes"
+      })
       // contrato_servicios.belongsTo(models.servicios);
       // servicios.hasMany(contrato_servicios);
     }
