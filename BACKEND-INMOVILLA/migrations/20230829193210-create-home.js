@@ -57,6 +57,26 @@ module.exports = {
       FKId_Agente: {
         type: Sequelize.INTEGER
       },
+      typeHousing: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"TypeHousings",
+            key:"id"
+          }
+        }
+      },
+      typeTarget: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"TypeTargets",
+            key:"id"
+          }
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
