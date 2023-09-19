@@ -18,22 +18,23 @@ const get = async (id) => {
   }
 }
 
-const create = async (Cedula, Nombre, Fecha_Nac,Telefono,Email,Fecha_Pago,Estado_Contrato,servicios_Incluidos,Codigo_Vivienda,OwnerContractId) => {
+const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Precio, Fecha_Pago, Estado_Contrato, Servicios_Incluidos, CodigoViviendaId, OwnerContractId) => {
   try {
     let newAdmin = await db.Contract.create({
-      Cedula,
-      Nombre,
-      Fecha_Nac,
-      Telefono,
-      Email,
+      Fecha_Ini,
+      Fecha_Fin,
+      Vigencia,
+      Cantidad_Habitantes,
+      Precio,
       Fecha_Pago,
       Estado_Contrato,
-      servicios_Incluidos,
-      Codigo_Vivienda,
-      OwnerContractId,
+      Servicios_Incluidos,
+      CodigoViviendaId,
+      OwnerContractId
     });
     return newAdmin
   } catch (error) {
+    console.log(error)
     throw { status: 400, message: error.message || "failed to create admin" };
   }
 }

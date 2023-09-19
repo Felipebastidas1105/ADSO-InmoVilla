@@ -9,19 +9,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Cedula: {
-        type: Sequelize.INTEGER
-      },
-      Nombre: {
-        type: Sequelize.STRING
-      },
-      Fecha_Nac: {
+      Fecha_Ini: {
         type: Sequelize.DATE
       },
-      Telefono: {
-        type: Sequelize.STRING
+      Fecha_Fin: {
+        type: Sequelize.DATE
       },
-      Email: {
+      Vigencia: {
+        type: Sequelize.DATE
+      },
+      Precio:{
         type: Sequelize.STRING
       },
       Fecha_Pago: {
@@ -31,6 +28,9 @@ module.exports = {
         type: Sequelize.STRING
       },
       Servicios_Incluidos: {
+        type: Sequelize.STRING
+      },
+      Cantidad_Habitantes:{
         type: Sequelize.STRING
       },
       CodigoViviendaId: {
