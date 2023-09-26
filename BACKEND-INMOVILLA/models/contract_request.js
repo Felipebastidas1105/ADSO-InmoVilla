@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
 
       ContractRequest.belongsToMany(models.jointTenant,{
       through:"RequestContract_jointTenant",
-      as:"jointTenants"
+      as:"JointTenants"
      })
       // define association here
       // solicitud_contrato_coarrendatarios.belongsTo(models.solicitud_contratos);
