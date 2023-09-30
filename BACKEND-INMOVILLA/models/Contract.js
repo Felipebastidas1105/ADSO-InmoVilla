@@ -12,9 +12,14 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       
       Contract.belongsToMany(models.Jointtenant,{
-        through:"contractJointTenant",    
+        through:"contractJointTenants",    
           as:"Jointtenants"
         })
+
+      Contract.belongsToMany(model.Services,{
+        through:"ContractServices",
+        as:"Services"
+      })
 
       Contract.belongsTo(models.Home);
         models.Home.hasMany(Contract);

@@ -24,8 +24,15 @@ module.exports = {
       Valor_Pago: {
         type: Sequelize.DOUBLE
       },
-      FKCodigo_Contrato: {
-        type: Sequelize.INTEGER
+      CodigoContratoId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"Contracts",
+            key:"id"
+          }
+        }
       },
       createdAt: {
         allowNull: false,
