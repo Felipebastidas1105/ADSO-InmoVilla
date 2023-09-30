@@ -23,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
         as:"services"
       })
 
-      Home.belongsTo(models.TypeHousing);
-      models.TypeHousing.hasMany(Home);
+      Home.belongsTo(models.Typehousing);
+      models.Typehousing.hasMany(Home);
 
-      Home.belongsTo(models.TypeTarget);
-      models.TypeTarget.hasMany(Home);
+      Home.belongsTo(models.Typetarget);
+      models.Typetarget.hasMany(Home);
     }
   }
   Home.init({
