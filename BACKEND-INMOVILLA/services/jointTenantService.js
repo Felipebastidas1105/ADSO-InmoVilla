@@ -2,16 +2,17 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let admins = await db.jointTenant.findAll()
+      let admins = await db.Jointtenant.findAll()
       return admins
     } catch (error) {
-  
+      throw {status: 400, message: error.message || "failed to create admin"};
+    
     }
   }
   
   const get = async (id) => {
     try {
-      let agent = await db.jointTenant.findByPk(id);
+      let agent = await db.Jointtenant.findByPk(id);
       return agent
     } catch (error) {
   
@@ -20,7 +21,7 @@ const getAll = async () => {
   
   const create = async (Cedula, Nombre, Fecha_Nac, Telefono,Email) => {
     try {
-      let newAdmin = await db.jointTenant.create({
+      let newAdmin = await db.Jointtenant.create({
         Cedula,
         Nombre,
         Fecha_Nac,
@@ -30,12 +31,13 @@ const getAll = async () => {
       return newAdmin
     } catch (error) {
       throw {status: 400, message: error.message || "failed to create admin"};
+      console.log(error)
     }
   }
   
   const update = async (id,Cedula, Nombre, Fecha_Nac, Telefono,Email) => {
     try {
-      const updated = await db.jointTenant.update({
+      const updated = await db.Jointtenant.update({
         Cedula,
         Nombre,
         Fecha_Nac,
@@ -58,7 +60,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.jointTenant.destroy({
+      let deleted = await db.Jointtenant.destroy({
         where:{
           id:id
         }

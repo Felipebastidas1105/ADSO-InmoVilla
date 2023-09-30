@@ -10,12 +10,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Contract.belongsToMany(models.jointTenant,{
+      
+      Contract.belongsToMany(models.Jointtenant,{
         through:"contractJointTenant",    
-          as:"jointTennants"
+          as:"Jointtenants"
         })
 
-        Contract.belongsTo(models.Home);
+      Contract.belongsTo(models.Home);
         models.Home.hasMany(Contract);
       // define association here
       // contrato_servicios.belongsTo(models.contratos);

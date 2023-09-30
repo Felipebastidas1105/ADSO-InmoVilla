@@ -59,23 +59,23 @@ module.exports = {
       },
       typeHousing: {
         type: Sequelize.INTEGER,
-        allowNull:false,
-        references:{
-          model:{
-            tableName:"TypeHousings",
-            key:"id"
-          }
-        }
+        allowNull:false
+        // references:{
+        //   model:{
+        //     tableName:"TypeHousings",
+        //     key:"id"
+        //   }
+        // }
       },
       typeTarget: {
         type: Sequelize.INTEGER,
-        allowNull:false,
-        references:{
-          model:{
-            tableName:"TypeTargets",
-            key:"id"
-          }
-        }
+        allowNull:false
+        // references:{
+        //   model:{
+        //     tableName:"TypeTargets",
+        //     key:"id"
+        //   }
+        // }
       },
       createdAt: {
         allowNull: false,

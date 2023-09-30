@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
 
-      ContractRequest.belongsToMany(models.jointTenant,{
+      ContractRequest.belongsToMany(models.Jointtenant,{
       through:"RequestContract_jointTenant",
-      as:"JointTenants"
+      as:"Jointtenants"
      })
       // define association here
       // solicitud_contrato_coarrendatarios.belongsTo(models.solicitud_contratos);
