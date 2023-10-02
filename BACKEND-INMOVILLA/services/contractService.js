@@ -2,18 +2,7 @@ const db = require('../models');
 
 const getAll = async () => {
   try {
-    let Contracts = await db.Contract.findAll({
-      include: {
-        model: db.Home,
-        required: true,
-        as: "CodigoVivienda",
-        attributes: ["id","Direccion","Ciudad","Codigo_Postal","Tipo","Precio","Estado","Area","Numero_Habitaciones","Numero_Baños","Descripcion","Foto","Fecha_Construccion","Fecha_Publicacion","Fecha_Venta","OwnerHomeId","createdAt","updatedAt"]
-      },
-        attributes:{
-          exclude:["createdAt","updatedAt"]
-        }
-      
-    })
+    let Contracts = await db.Contract.findAll()
     return Contracts
   } catch (error) {
     throw { status: 500, message: error.message || "failed to get all contracts" };

@@ -17,7 +17,7 @@ app.use('/api/v1/contract', require('./api/v1/routes/contract.routes'));
 app.use('/api/v1/owner', require('./api/v1/routes/owner.routes'));
 app.use('/api/v1/tenant', require('./api/v1/routes/tenant.routes'));
 app.use('/api/v1/service', require('./api/v1/routes/service.routes'));
-app.use('/api/v1/housing', require('./api/v1/routes/housing.routes'));
+app.use('/api/v1/home', require('./api/v1/routes/home.routes'));
 
 app.listen(app.get('port'), () => {
     console.log(`Server running on localhost:${app.get('port')}`);

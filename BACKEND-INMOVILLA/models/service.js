@@ -19,7 +19,7 @@ module.exports = (sequelize, DataTypes) => {
         as:"homes"
       })
 
-      Service.belongsToMany(model.Contract,{
+      Service.belongsToMany(models.Contract,{
         through:"ContractServices",
         as:"Contracts"
       })

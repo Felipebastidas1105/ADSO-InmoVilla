@@ -16,13 +16,13 @@ module.exports = (sequelize, DataTypes) => {
           as:"Jointtenants"
         })
 
-      Contract.belongsToMany(model.Services,{
+      Contract.belongsToMany(models.Service,{
         through:"ContractServices",
         as:"Services"
       })
 
-      Contract.belongsTo(models.Home);
-      models.Home.hasMany(Contract);
+      // Contract.belongsTo(models.Home);
+      // models.Home.hasMany(Contract);
 
       // define association here
       // contrato_servicios.belongsTo(models.contratos);

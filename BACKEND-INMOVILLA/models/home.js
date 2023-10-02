@@ -15,12 +15,12 @@ module.exports = (sequelize, DataTypes) => {
 
       Home.belongsToMany(models.Owner,{
         through: "home_owner",
-        as:'agents'
+        as:'Agents'
       })
 
       Home.belongsToMany(models.Service,{
         through: "HomeService",
-        as:"services"
+        as:"Services"
       })
 
       Home.belongsTo(models.Typehousing);
