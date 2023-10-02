@@ -2,7 +2,7 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let admins = await db.Agent.findAll()
+      let admins = await db.Homedgfgf.findAll()
       return admins
     } catch (error) {
   
@@ -11,7 +11,7 @@ const getAll = async () => {
   
   const get = async (id) => {
     try {
-      let agent = await db.Agent.findByPk(id);
+      let agent = await db.Home.findByPk(id);
       return agent
     } catch (error) {
   
@@ -20,7 +20,7 @@ const getAll = async () => {
   
   const create = async (Nombre_Agente, Email_Agente, Telefono_Agente) => {
     try {
-      let newAdmin = await db.Agent.create({
+      let newAdmin = await db.Home.create({
         Nombre_Agente,
         Email_Agente,
         Telefono_Agente
@@ -33,7 +33,7 @@ const getAll = async () => {
   
   const update = async (id,Nombre_Agente,Email_Agente,Telefono_Agente) => {
     try {
-      const updated = await db.Agent.update({
+      const updated = await db.Home.update({
         Nombre_Agente,
         Email_Agente,
         Telefono_Agente
@@ -54,7 +54,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.Agent.destroy({
+      let deleted = await db.Home.destroy({
         where:{
           id:id
         }

@@ -18,7 +18,7 @@ module.exports = {
           }
         }
       },
-      homeId: {
+      HomeId: {
         type: Sequelize.INTEGER,
         references:{
           model:{
