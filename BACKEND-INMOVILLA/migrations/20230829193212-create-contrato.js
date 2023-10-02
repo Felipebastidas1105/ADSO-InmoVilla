@@ -33,7 +33,7 @@ module.exports = {
       Cantidad_Habitantes:{
         type: Sequelize.STRING
       },
-      CodigoViviendaId: {
+      HomeId: {
         type: Sequelize.INTEGER,
         allowNull:false,
         references:{

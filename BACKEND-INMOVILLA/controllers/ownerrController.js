@@ -12,8 +12,8 @@ const getAll = async (req, res) => {
   const get = async (req, res) => {
     let  id = req.params.id;
     try {
-      const ownerService = await ownerService.get(id);
-      res.status(200).send({status:"OK", data:ownerService})
+      const ownerServices = await ownerService.get(id);
+      res.status(200).send({status:"OK", data:ownerServices})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

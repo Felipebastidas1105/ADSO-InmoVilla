@@ -54,10 +54,17 @@ module.exports = {
       Precio_Venta: {
         type: Sequelize.STRING
       },
-      FKId_Agente: {
-        type: Sequelize.INTEGER
+      AgentId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"Agents",
+            key:"id"
+          }
+        }
       },
-      typeHousing: {
+      TypehousingId: {
         type: Sequelize.INTEGER,
         allowNull:false,
         references:{
@@ -67,7 +74,7 @@ module.exports = {
           }
         }
       },
-      typeTarget: {
+      TypetargetId: {
         type: Sequelize.INTEGER,
         allowNull:false,
         references:{

@@ -2,7 +2,7 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let typeHousings = await db.TypeHousing.findAll()
+      let typeHousings = await db.Typehousing.findAll()
       return typeHousings
     } catch (error) {
   
@@ -11,29 +11,30 @@ const getAll = async () => {
   
   const get = async (id) => {
     try {
-      let typeHousing = await db.TypeHousing.findByPk(id);
+      let typeHousing = await db.Typehousing.findByPk(id);
       return typeHousing
     } catch (error) {
   
     }
   }
   
-  const create = async (codTipoVivienda,nombre) => {
+  const create = async (CodTipoVivienda,Nombre) => {
     try {
-      let newtTypeHousing = await db.TypeHousing.create({
-        codTipoVivienda,nombre
+      let newtTypeHousing = await db.Typehousing.create({
+        CodTipoVivienda,
+        Nombre
       });
-      return newAdmin
+      return newtTypeHousing
     } catch (error) {
       throw {status: 400, message: error.message || "failed to create typeHousing"};
     }
   }
   
-  const update = async (id,codTipoVivienda,nombre) => {
+  const update = async (id,CodTipoVivienda,Nombre) => {
     try {
-      const updated = await db.TypeHousing.update({
-        codTipoVivienda,
-        nombre
+      const updated = await db.Typehousing.update({
+        CodTipoVivienda,
+        Nombre
       },
       {
         where: {
@@ -51,7 +52,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.TypeHousing.destroy({
+      let deleted = await db.Typehousing.destroy({
         where:{
           id:id
         }

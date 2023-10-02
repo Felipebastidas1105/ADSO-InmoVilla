@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const newContract = await contractService.create(data.Fecha_Ini,data.Fecha_Fin,data.Vigencia,data.Cantidad_Habitantes,data.Precio,data.Fecha_Pago,data.Estado_Contrato,data.Servicios_Incluidos,data.CodigoViviendaId,data.OwnerContractId);
+      const newContract = await contractService.create(data.Fecha_Ini,data.Fecha_Fin,data.Vigencia,data.Cantidad_Habitantes,data.Precio,data.Fecha_Pago,data.Estado_Contrato,data.Servicios_Incluidos,data.HomeId,data.OwnerContractId);
       res.status(201).json(newContract);
     } catch (error) {
       res.status(500).json({ error: error.message });

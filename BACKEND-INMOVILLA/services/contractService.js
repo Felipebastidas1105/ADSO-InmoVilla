@@ -18,7 +18,7 @@ const get = async (id) => {
   }
 }
 
-const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Precio, Fecha_Pago, Estado_Contrato, Servicios_Incluidos, CodigoViviendaId, OwnerContractId) => {
+const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Precio, Fecha_Pago, Estado_Contrato, Servicios_Incluidos, HomeId, OwnerContractId) => {
   try {
     let newAdmin = await db.Contract.create({
       Fecha_Ini,
@@ -29,7 +29,7 @@ const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Preci
       Fecha_Pago,
       Estado_Contrato,
       Servicios_Incluidos,
-      CodigoViviendaId,
+      HomeId,
       OwnerContractId
     });
     return newAdmin

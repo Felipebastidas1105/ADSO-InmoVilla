@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const newTypeHousing = await typeHousingServices.create(data.codTipoObjetivo,data.nombre);
+      const newTypeHousing = await typeHousingServices.create(data.CodTipoVivienda,data.Nombre);
       res.status(201).json(newTypeHousing);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await typeHousingServices.update(id, data.codTipoObjetivo, data.nombre);
+      const updated = await typeHousingServices.update(id, data.CodTipoVivienda, data.Nombre);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });

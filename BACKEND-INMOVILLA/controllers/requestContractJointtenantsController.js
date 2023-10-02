@@ -1,9 +1,9 @@
-const serviceService = require('../services/serviceService');
+const requestContractJointtenantsService = require('../services/requestContractJointtenantsService');
 
 const getAll = async (req, res) => {
     try {
-      const serviceServices  = await serviceService.getAll();
-      res.status(200).send({status:"OK", data: serviceServices});
+      const agents  = await requestContractJointtenantsService.getAll();
+      res.status(200).send({status:"OK", data: agents});
     } catch (error) {
       res.status(500).json({ error: error.message }); 
     }
@@ -12,8 +12,8 @@ const getAll = async (req, res) => {
   const get = async (req, res) => {
     let  id = req.params.id;
     try {
-      const serviceServices = await serviceService.get(id);
-      res.status(200).send({status:"OK", data:serviceServices})
+      const agent = await requestContractJointtenantsService.get(id);
+      res.status(200).send({status:"OK", data:agent})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await serviceService.create(data.Id_Servicios, data.Nombre_Servicios);
+      const nuevoAdministrador = await requestContractJointtenantsService.create(data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
       res.status(201).json(nuevoAdministrador);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await serviceService.update(id, data.Id_Servicios, data.Nombre_Servicios);
+      const updated = await requestContractJointtenantsService.update(id, data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -43,8 +43,8 @@ const getAll = async (req, res) => {
   const destroy = async (req, res) =>  {
     let id = req.params.id;
     try {
-      const deletedService = await serviceService.destroy(id);
-      res.status(204).send({status:"OK",data:deletedService});
+      const deletedAdmin = await requestContractJointtenantsService.destroy(id);
+      res.status(204).send({status:"OK",data:deletedAdmin});
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

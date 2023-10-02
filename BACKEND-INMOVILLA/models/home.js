@@ -28,6 +28,9 @@ module.exports = (sequelize, DataTypes) => {
 
       Home.belongsTo(models.Typetarget);
       models.Typetarget.hasMany(Home);
+
+      Home.belongsTo(models.Agent);
+      models.Agent.hasMany(Home);
     }
   }
   Home.init({
@@ -46,9 +49,9 @@ module.exports = (sequelize, DataTypes) => {
     Tiene_Patio: DataTypes.STRING,
     Cant_Baños: DataTypes.STRING,
     Precio_Venta: DataTypes.STRING,
-    FKId_Agente: DataTypes.INTEGER,
-    typeHousing: DataTypes.INTEGER,
-    typeTarget: DataTypes.INTEGER
+    AgentId: DataTypes.INTEGER,
+    TypehousingId: DataTypes.INTEGER,
+    TypetargetId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Home',

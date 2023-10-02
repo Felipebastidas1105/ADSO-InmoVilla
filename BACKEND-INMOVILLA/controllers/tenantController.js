@@ -2,8 +2,8 @@ const tenantService = require('../services/tenantService');
 
 const getAll = async (req, res) => {
     try {
-      const tenantServices  = await tenantService.getAll();
-      res.status(200).send({status:"OK", data: tenantServices});
+      const tenantServicess  = await tenantService.getAll();
+      res.status(200).send({status:"OK", data: tenantServicess});
     } catch (error) {
       res.status(500).json({ error: error.message }); 
     }
@@ -12,8 +12,8 @@ const getAll = async (req, res) => {
   const get = async (req, res) => {
     let  id = req.params.id;
     try {
-      const tenantService = await tenantService.get(id);
-      res.status(200).send({status:"OK", data:tenantService})
+      const tenantServices = await tenantService.get(id);
+      res.status(200).send({status:"OK", data:tenantServices})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

@@ -12,7 +12,7 @@ const HomeService = require('../services/homeService');
   }
 
   const get= async (req, res) => {
-    let  id = req.params.adminId;
+    let  id = req.params.id;
     try {
       const administrador = await HomeService.get(id);
       res.status(200).send({status:"OK", data:administrador})
@@ -24,7 +24,7 @@ const HomeService = require('../services/homeService');
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await HomeService.create(data.Codigo_Vivienda, data.Ubicacion, data.Cant_Cuartos, data.Caracteristicas_Extra, data.Tiene_Servicios_Incluidos, data.Tipo_Objeto, data.Area_Inmueble, data.Precio, data.Descripcion, data.Tiene_Garaje_Moto,data.Tipo_Vivienda,data.Tiene_Garaje_Carro,data.Tiene_Patio,data.Cant_Baños,data.Precio_Venta,data.FKId_Agente,data.typeHousing,data.typeTarget);
+      const nuevoAdministrador = await HomeService.create(data.Codigo_Vivienda, data.Ubicacion, data.Cant_Cuartos, data.Caracteristicas_Extra, data.Tiene_Servicios_Incluidos, data.Tipo_Objeto, data.Area_Inmueble, data.Precio, data.Descripcion, data.Tiene_Garaje_Moto,data.Tipo_Vivienda,data.Tiene_Garaje_Carro,data.Tiene_Patio,data.Cant_Baños,data.Precio_Venta,data.AgentId,data.TypehousingId,data.TypetargetId);
       res.status(201).json(nuevoAdministrador);
     } catch (error) {
       res.status(500).json({ error: error.message });

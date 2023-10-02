@@ -2,7 +2,7 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let typeTargets = await db.typeTarget.findAll()
+      let typeTargets = await db.Typetarget.findAll()
       return typeTargets
     } catch (error) {
   
@@ -11,29 +11,30 @@ const getAll = async () => {
   
   const get = async (id) => {
     try {
-      let typeTarget = await db.typeTarget.findByPk(id);
+      let typeTarget = await db.Typetarget.findByPk(id);
       return typeTarget
     } catch (error) {
   
     }
   }
   
-  const create = async (codTipoTarget,nombre) => {
+  const create = async (CodTipoObjeto,Nombre) => {
     try {
-      let newttypeTarget = await db.typeTarget.create({
-        codTipoTarget,nombre
+      let newttypeTarget = await db.Typetarget.create({
+        CodTipoObjeto,
+        Nombre
       });
-      return newAdmin
+      return newttypeTarget
     } catch (error) {
       throw {status: 400, message: error.message || "failed to create typeTarget"};
     }
   }
   
-  const update = async (id,codTipoTarget,nombre) => {
+  const update = async (id,CodTipoObjeto,Nombre) => {
     try {
-      const updated = await db.typeTarget.update({
-        codTipoTarget,
-        nombre
+      const updated = await db.Typetarget.update({
+        CodTipoObjeto,
+        Nombre
       },
       {
         where: {
@@ -51,7 +52,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.typeTarget.destroy({
+      let deleted = await db.Typetarget.destroy({
         where:{
           id:id
         }

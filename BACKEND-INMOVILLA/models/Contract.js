@@ -21,8 +21,8 @@ module.exports = (sequelize, DataTypes) => {
         as:"Services"
       })
 
-      // Contract.belongsTo(models.Home);
-      // models.Home.hasMany(Contract);
+      Contract.belongsTo(models.Home);
+      models.Home.hasMany(Contract);
 
       // define association here
       // contrato_servicios.belongsTo(models.contratos);
@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     Fecha_Pago: DataTypes.DATE,
     Estado_Contrato: DataTypes.STRING,
     Servicios_Incluidos: DataTypes.STRING,
-    CodigoViviendaId: DataTypes.INTEGER,
+    HomeId: DataTypes.INTEGER,
     OwnerContractId: DataTypes.INTEGER
   }, {
     sequelize,
