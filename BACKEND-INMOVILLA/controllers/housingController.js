@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await housingService.update(id, data.Codigo_Vivienda, data.Ubicacion, data.Cant_Cuartos,data.Caracteristicas_Extra ,data.Tiene_Servicios_Incluidos ,data.Area_Inmueble,data.Precio,data.Descripcion,data.Tiene_Garaje_Moto,data.Tiene_Garaje_Carro,data.Tiene_Patio,data.Cant_Baños,data.Precio_Venta);
+      const updated = await housingService.update(id,data.Codigo_Vivienda, data.Ubicacion, data.Cant_Cuartos,data.Caracteristicas_Extra ,data.Tiene_Servicios_Incluidos ,data.Area_Inmueble,data.Precio,data.Descripcion,data.Tiene_Garaje_Moto,data.Tiene_Garaje_Carro,data.Tiene_Patio,data.Cant_Baños,data.Precio_Venta);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });

@@ -2,8 +2,8 @@ const contractService = require('../services/contractService');
 
 const getAll = async (req, res) => {
     try {
-      const contracts  = await contractService.getAll();
-      res.status(200).send({status:"OK", data: contracts});
+      const resp  = await contractService.getAll();
+      res.status(200).send({status:"OK", data: resp});
     } catch (error) {
       res.status(500).json({ error: error.message }); 
     }
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await contractService.update(id, data.Cedula, data.Nombre, data.Fecha_Nac,data.Telefono,data.Email,data.Fecha_Pago,data.Estado_Contrato,data.Servicios_Incluidos);
+      const updated = await contractService.update(id, data.Fecha_Ini,data.Fecha_Fin,data.Vigencia,data.Cantidad_Habitantes,data.Precio,data.Fecha_Pago,data.Estado_Contrato,data.Servicios_Incluidos);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });

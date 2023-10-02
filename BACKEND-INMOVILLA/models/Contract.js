@@ -17,7 +17,8 @@ module.exports = (sequelize, DataTypes) => {
         })
 
       Contract.belongsTo(models.Home);
-        models.Home.hasMany(Contract);
+      models.Home.hasMany(Contract);
+
       // define association here
       // contrato_servicios.belongsTo(models.contratos);
       // contratos.hasMany(contrato_servicios)
