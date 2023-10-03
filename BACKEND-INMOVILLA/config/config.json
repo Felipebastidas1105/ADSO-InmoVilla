@@ -21,10 +21,17 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "inmovilla_user",
+    "password": "9LvxbldogCJVn2CmTOBUIaznNZnLhki7",
+    "database": "inmovilla",
+    "host": "oregon-postgres.render.com",
+    "dialect": "postgres",
+    "dialectOptions":{
+      "ssl":{
+        "require":true,
+        "rejectUnauthorized":false
+      }
+    }
   }
 }
+
