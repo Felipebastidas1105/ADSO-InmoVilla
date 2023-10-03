@@ -2,8 +2,8 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let admins = await db.Agent.findAll()
-      return admins
+      let All = await db.ContractRequest.findAll()
+      return All
     } catch (error) {
   
     }
@@ -11,32 +11,48 @@ const getAll = async () => {
   
   const get = async (id) => {
     try {
-      let agent = await db.Agent.findByPk(id);
-      return agent
+      let Selected = await db.ContractRequest.findByPk(id);
+      return Selected
     } catch (error) {
   
     }
   }
   
-  const create = async (Nombre_Agente, Email_Agente, Telefono_Agente) => {
+  const create = async (Id_Solicitud,Codigo_Solicitud,Desprendible_Pago1,Desprendible_Pago2,Desprendible_Pago3,Fecha_Solicitud,Estado_Solicitud,Aprobacion_Inquilino,Carta_Laboral,FKCedula_Inquilino,FKCodigo_Contrato) => {
     try {
-      let newAdmin = await db.Agent.create({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      let created = await db.ContractRequest.create({
+        Id_Solicitud,
+        Codigo_Solicitud,
+        Desprendible_Pago1,
+        Desprendible_Pago2,
+        Desprendible_Pago3,
+        Fecha_Solicitud,
+        Estado_Solicitud,
+        Aprobacion_Inquilino,
+        Carta_Laboral,
+        FKCedula_Inquilino,
+        FKCodigo_Contrato
       });
-      return newAdmin
+      return created
     } catch (error) {
       throw {status: 400, message: error.message || "failed to create admin"};
     }
   }
   
-  const update = async (id,Nombre_Agente,Email_Agente,Telefono_Agente) => {
+  const update = async (id,Id_Solicitud,Codigo_Solicitud,Desprendible_Pago1,Desprendible_Pago2,Desprendible_Pago3,Fecha_Solicitud,Estado_Solicitud,Aprobacion_Inquilino,Carta_Laboral,FKCedula_Inquilino,FKCodigo_Contrato) => {
     try {
-      const updated = await db.Agent.update({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      const updated = await db.ContractRequest.update({
+        Id_Solicitud,
+        Codigo_Solicitud,
+        Desprendible_Pago1,
+        Desprendible_Pago2,
+        Desprendible_Pago3,
+        Fecha_Solicitud,
+        Estado_Solicitud,
+        Aprobacion_Inquilino,
+        Carta_Laboral,
+        FKCedula_Inquilino,
+        FKCodigo_Contrato
       },
       {
         where: {
@@ -54,7 +70,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.Agent.destroy({
+      let deleted = await db.ContractRequest.destroy({
         where:{
           id:id
         }

@@ -2,8 +2,8 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let admins = await db.Agent.findAll()
-      return admins
+      let All = await db.HomeOwner.findAll()
+      return All
     } catch (error) {
   
     }
@@ -11,32 +11,30 @@ const getAll = async () => {
   
   const get = async (id) => {
     try {
-      let agent = await db.Agent.findByPk(id);
-      return agent
+      let homeOwner = await db.HomeOwner.findByPk(id);
+      return homeOwner
     } catch (error) {
   
     }
   }
   
-  const create = async (Nombre_Agente, Email_Agente, Telefono_Agente) => {
+  const create = async (OwnerId, HomeId) => {
     try {
-      let newAdmin = await db.Agent.create({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      let newHomeOwner = await db.HomeOwner.create({
+        OwnerId,
+        HomeId
       });
-      return newAdmin
+      return newHomeOwner
     } catch (error) {
       throw {status: 400, message: error.message || "failed to create admin"};
     }
   }
   
-  const update = async (id,Nombre_Agente,Email_Agente,Telefono_Agente) => {
+  const update = async (id,OwnerId, HomeId) => {
     try {
-      const updated = await db.Agent.update({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      const updated = await db.HomeOwner.update({
+        OwnerId,
+        HomeId
       },
       {
         where: {
@@ -54,7 +52,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.Agent.destroy({
+      let deleted = await db.HomeOwner.destroy({
         where:{
           id:id
         }

@@ -2,8 +2,8 @@ const ownerContractService = require('../services/ownerContractService');
 
 const getAll = async (req, res) => {
     try {
-      const agents  = await ownerContractService.getAll();
-      res.status(200).send({status:"OK", data: agents});
+      const All  = await ownerContractService.getAll();
+      res.status(200).send({status:"OK", data: All});
     } catch (error) {
       res.status(500).json({ error: error.message }); 
     }
@@ -12,8 +12,8 @@ const getAll = async (req, res) => {
   const get = async (req, res) => {
     let  id = req.params.id;
     try {
-      const agent = await ownerContractService.get(id);
-      res.status(200).send({status:"OK", data:agent})
+      const Get = await ownerContractService.get(id);
+      res.status(200).send({status:"OK", data:Get})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -22,8 +22,8 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await ownerContractService.create(data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
-      res.status(201).json(nuevoAdministrador);
+      const nuevo = await ownerContractService.create(data.Codigo_Contrato_Dueño, data.Precio, data.Fecha_Inicio, data.Fecha_Fin, data.Estado_Contrato, data.Fecha_Pago, data.Vigencia, data.OwnerId);
+      res.status(201).json(nuevo);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await ownerContractService.update(id, data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
+      const updated = await ownerContractService.update(id, data.Codigo_Contrato_Dueño, data.Precio, data.Fecha_Inicio, data.Fecha_Fin, data.Estado_Contrato, data.Fecha_Pago, data.Vigencia, data.OwnerId);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -43,8 +43,8 @@ const getAll = async (req, res) => {
   const destroy = async (req, res) =>  {
     let id = req.params.id;
     try {
-      const deletedAdmin = await ownerContractService.destroy(id);
-      res.status(204).send({status:"OK",data:deletedAdmin});
+      const deleted = await ownerContractService.destroy(id);
+      res.status(204).send({status:"OK",data:deleted});
     } catch (error) {
       res.status(500).json({ error: error.message });
     }

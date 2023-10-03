@@ -31,7 +31,6 @@ const getAll = async () => {
       return newAdmin
     } catch (error) {
       throw {status: 400, message: error.message || "failed to create admin"};
-      console.log(error)
     }
   }
   

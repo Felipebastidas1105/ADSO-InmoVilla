@@ -22,7 +22,7 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await homeOwnerService.create(data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
+      const nuevoAdministrador = await homeOwnerService.create(data.OwnerId, data.HomeId);
       res.status(201).json(nuevoAdministrador);
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await homeOwnerService.update(id, data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
+      const updated = await homeOwnerService.update(id,data.OwnerId, data.HomeId);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });

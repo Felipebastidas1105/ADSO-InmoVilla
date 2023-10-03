@@ -18,12 +18,11 @@ const getAll = async () => {
     }
   }
   
-  const create = async (Nombre_Agente, Email_Agente, Telefono_Agente) => {
+  const create = async (requestContractId, jointTenantId) => {
     try {
       let newAdmin = await db.Agent.create({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+        requestContractId,
+        jointTenantId
       });
       return newAdmin
     } catch (error) {
@@ -31,12 +30,11 @@ const getAll = async () => {
     }
   }
   
-  const update = async (id,Nombre_Agente,Email_Agente,Telefono_Agente) => {
+  const update = async (id,requestContractId, jointTenantId) => {
     try {
       const updated = await db.Agent.update({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+        requestContractId,
+        jointTenantId
       },
       {
         where: {

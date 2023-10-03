@@ -2,8 +2,8 @@ const requestContractJointtenantsService = require('../services/requestContractJ
 
 const getAll = async (req, res) => {
     try {
-      const agents  = await requestContractJointtenantsService.getAll();
-      res.status(200).send({status:"OK", data: agents});
+      const All  = await requestContractJointtenantsService.getAll();
+      res.status(200).send({status:"OK", data: All});
     } catch (error) {
       res.status(500).json({ error: error.message }); 
     }
@@ -12,8 +12,8 @@ const getAll = async (req, res) => {
   const get = async (req, res) => {
     let  id = req.params.id;
     try {
-      const agent = await requestContractJointtenantsService.get(id);
-      res.status(200).send({status:"OK", data:agent})
+      const Selected = await requestContractJointtenantsService.get(id);
+      res.status(200).send({status:"OK", data:Selected})
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -22,8 +22,8 @@ const getAll = async (req, res) => {
   const create = async (req, res) =>  {
     const data = req.body;
     try {
-      const nuevoAdministrador = await requestContractJointtenantsService.create(data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
-      res.status(201).json(nuevoAdministrador);
+      const created = await requestContractJointtenantsService.create(data.requestContractId, data.jointTenantId);
+      res.status(201).json(created);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
@@ -33,7 +33,7 @@ const getAll = async (req, res) => {
     let id  = req.params.id;
     const data = req.body;
     try {
-      const updated = await requestContractJointtenantsService.update(id, data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
+      const updated = await requestContractJointtenantsService.update(id, data.requestContractId, data.jointTenantId);
       res.status(200).send({status:"OK", data:updated})
     } catch (error) {
       res.status(500).json({ error: error.message });
@@ -43,8 +43,8 @@ const getAll = async (req, res) => {
   const destroy = async (req, res) =>  {
     let id = req.params.id;
     try {
-      const deletedAdmin = await requestContractJointtenantsService.destroy(id);
-      res.status(204).send({status:"OK",data:deletedAdmin});
+      const deleted = await requestContractJointtenantsService.destroy(id);
+      res.status(204).send({status:"OK",data:deleted});
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
