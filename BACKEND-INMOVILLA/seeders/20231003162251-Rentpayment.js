@@ -5,7 +5,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('rentPayments', [
       {
-        Codigo_Pago: 'RP00001',
+        Codigo_Pago: '1',
         Soporte_Pago: 'payment1.jpg',
         Medio_Pago: 'Tarjeta de crédito',
         Estado_Pago: 'Pendiente',
@@ -15,7 +15,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Codigo_Pago: 'RP00002',
+        Codigo_Pago: '1',
         Soporte_Pago: 'payment2.jpg',
         Medio_Pago: 'Transferencia bancaria',
         Estado_Pago: 'Aprobado',
@@ -25,7 +25,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Codigo_Pago: 'RP00003',
+        Codigo_Pago: '1',
         Soporte_Pago: 'payment3.jpg',
         Medio_Pago: 'Efectivo',
         Estado_Pago: 'Rechazado',
@@ -35,7 +35,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Codigo_Pago: 'RP00004',
+        Codigo_Pago: '1',
         Soporte_Pago: 'payment4.jpg',
         Medio_Pago: 'Tarjeta de débito',
         Estado_Pago: 'Pendiente',
@@ -45,7 +45,7 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Codigo_Pago: 'RP00005',
+        Codigo_Pago: '1',
         Soporte_Pago: 'payment5.jpg',
         Medio_Pago: 'Cheque',
         Estado_Pago: 'Aprobado',

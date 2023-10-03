@@ -7,8 +7,8 @@ module.exports = {
       {
         Cedula: '1234567890',
         Nombre: 'John Doe',
-        fecha_Nac: '1990-01-01',
-        telefono: '555-5555',
+        Fecha_Nac: '1990-01-01',
+        Telefono: '555-5555',
         Email: 'johndoe@example.com',
         Estado: 'Activo',
         Direccion: '123 Main St',
@@ -18,8 +18,8 @@ module.exports = {
       {
         Cedula: '0987654321',
         Nombre: 'Jane Smith',
-        fecha_Nac: '1995-02-01',
-        telefono: '555-5555',
+        Fecha_Nac: '1995-02-01',
+        Telefono: '555-5555',
         Email: 'janesmith@example.com',
         Estado: 'Activo',
         Direccion: '456 Elm St',
@@ -29,8 +29,8 @@ module.exports = {
       {
         Cedula: '1357908642',
         Nombre: 'Bob Johnson',
-        fecha_Nac: '1985-03-15',
-        telefono: '555-5555',
+        Fecha_Nac: '1985-03-15',
+        Telefono: '555-5555',
         Email: 'bobjohnson@example.com',
         Estado: 'Inactivo',
         Direccion: '789 Oak St',
@@ -38,10 +38,10 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Cedula: '2468013579',
+        Cedula: '24680139',
         Nombre: 'Alice Lee',
-        fecha_Nac: '1992-04-30',
-        telefono: '555-5555',
+        Fecha_Nac: '1992-04-30',
+        Telefono: '555-5555',
         Email: 'alicelee@example.com',
         Estado: 'Activo',
         Direccion: '321 Pine St',
@@ -49,10 +49,10 @@ module.exports = {
         updatedAt: new Date()
       },
       {
-        Cedula: '3692581470',
+        Cedula: '3691470',
         Nombre: 'Tom Wilson',
-        fecha_Nac: '1998-05-15',
-        telefono: '555-5555',
+        Fecha_Nac: '1998-05-15',
+        Telefono: '555-5555',
         Email: 'tomwilson@example.com',
         Estado: 'Inactivo',
         Direccion: '654 Cedar St',

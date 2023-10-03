@@ -5,31 +5,31 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('RequestContract_jointTenants', [
       {
-        requestContractid: 1,
+        requestContractId: 1,
         jointTenantId: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        requestContractid: 1,
+        requestContractId: 1,
         jointTenantId: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        requestContractid: 2,
+        requestContractId: 2,
         jointTenantId: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        requestContractid: 3,
+        requestContractId: 3,
         jointTenantId: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        requestContractid: 4,
+        requestContractId: 4,
         jointTenantId: 5,
         createdAt: new Date(),
         updatedAt: new Date()

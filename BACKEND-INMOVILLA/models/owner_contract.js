@@ -16,7 +16,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   OwnerContract.init({
-    Codigo_Contratro_Dueño: DataTypes.INTEGER,
+    Codigo_Contrato_Dueño: DataTypes.INTEGER,
     Precio: DataTypes.DOUBLE,
     Fecha_Fin: DataTypes.DATE,
     Fecha_Inicio: DataTypes.DATE,

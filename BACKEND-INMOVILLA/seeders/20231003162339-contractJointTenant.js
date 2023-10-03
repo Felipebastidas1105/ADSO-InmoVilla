@@ -6,31 +6,31 @@ module.exports = {
     await queryInterface.bulkInsert('contractJointTenants', [
       {
         contractId: 1,
-        joinTenant: 1,
+        jointTenant: 1,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         contractId: 1,
-        joinTenant: 2,
+        jointTenant: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         contractId: 2,
-        joinTenant: 2,
+        jointTenant: 2,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         contractId: 3,
-        joinTenant: 4,
+        jointTenant: 4,
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
         contractId: 4,
-        joinTenant: 3,
+        jointTenant: 3,
         createdAt: new Date(),
         updatedAt: new Date()
       }

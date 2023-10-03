@@ -7,7 +7,7 @@ module.exports = {
       {
         Fecha_Ini: '2022-01-01',
         Fecha_Fin: '2022-12-31',
-        Vigencia: 12,
+        Vigencia: '1985-12-31',
         Precio: 1000,
         Fecha_Pago: '2022-01-01',
         Estado_Contrato: 'Activo',
@@ -21,7 +21,7 @@ module.exports = {
       {
         Fecha_Ini: '2022-02-01',
         Fecha_Fin: '2023-01-31',
-        Vigencia: 12,
+        Vigencia: '1985-12-31',
         Precio: 2000,
         Fecha_Pago: '2022-02-01',
         Estado_Contrato: 'Activo',
@@ -35,7 +35,7 @@ module.exports = {
       {
         Fecha_Ini: '2022-03-01',
         Fecha_Fin: '2023-02-28',
-        Vigencia: 12,
+        Vigencia: '1985-12-31',
         Precio: 3000,
         Fecha_Pago: '2022-03-01',
         Estado_Contrato: 'Inactivo',
@@ -50,7 +50,7 @@ module.exports = {
       {
         Fecha_Ini: '2022-03-01',
         Fecha_Fin: '2023-02-28',
-        Vigencia: 12,
+        Vigencia: '1985-12-31',
         Precio: 3000,
         Fecha_Pago: '2022-03-01',
         Estado_Contrato: 'Inactivo',
@@ -65,7 +65,7 @@ module.exports = {
       {
         Fecha_Ini: '2022-03-01',
         Fecha_Fin: '2023-02-28',
-        Vigencia: 12,
+        Vigencia: '1985-12-31',
         Precio: 30000,
         Fecha_Pago: '2022-03-01',
         Estado_Contrato: 'Inactivo',
