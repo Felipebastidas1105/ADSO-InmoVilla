@@ -2,7 +2,7 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let admins = await db.Agent.findAll()
+      let admins = await db.Owner.findAll()
       return admins
     } catch (error) {
   
@@ -11,19 +11,23 @@ const getAll = async () => {
   
   const get = async (id) => {
     try {
-      let agent = await db.Agent.findByPk(id);
+      let agent = await db.Owner.findByPk(id);
       return agent
     } catch (error) {
   
     }
   }
   
-  const create = async (Nombre_Agente, Email_Agente, Telefono_Agente) => {
+  const create = async (Cedula_Dueño, Nombre, Fecha_Nac_Dueño,Telefono_Dueño,Estado_Dueño,Email_Dueño,Direccion_Dueño) => {
     try {
-      let newAdmin = await db.Agent.create({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      let newAdmin = await db.Owner.create({
+        Cedula_Dueño,
+        Nombre,
+        Fecha_Nac_Dueño,
+        Telefono_Dueño,
+        Estado_Dueño,
+        Email_Dueño,
+        Direccion_Dueño
       });
       return newAdmin
     } catch (error) {
@@ -31,12 +35,16 @@ const getAll = async () => {
     }
   }
   
-  const update = async (id,Nombre_Agente,Email_Agente,Telefono_Agente) => {
+  const update = async (id,Cedula_Dueño, Nombre, Fecha_Nac_Dueño,Telefono_Dueño,Estado_Dueño,Email_Dueño,Direccion_Dueño) => {
     try {
-      const updated = await db.Agent.update({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      const updated = await db.Owner.update({
+        Cedula_Dueño,
+        Nombre,
+        Fecha_Nac_Dueño,
+        Telefono_Dueño,
+        Estado_Dueño,
+        Email_Dueño,
+        Direccion_Dueño
       },
       {
         where: {
@@ -54,7 +62,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.Agent.destroy({
+      let deleted = await db.Owner.destroy({
         where:{
           id:id
         }

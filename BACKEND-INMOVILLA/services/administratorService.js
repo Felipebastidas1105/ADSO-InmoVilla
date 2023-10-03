@@ -7,7 +7,7 @@ const getAll = async () => {
     let admins = await db.Administrator.findAll()
     return admins
   } catch (error) {
-
+    throw {status: 500, message: error.message || "failed to get all admins"};
   }
 }
 
@@ -16,7 +16,7 @@ const get = async (id) => {
     let admin = await db.Administrator.findByPk(id);
     return admin
   } catch (error) {
-
+    throw {status: 500, message: error.message || "failed to get admin"};
   }
 }
 
@@ -25,7 +25,7 @@ const create = async (Nombre_Admin, Email_Admin, Telefono_Admin) => {
     let newAdmin = await db.Administrator.create({
       Nombre_Admin,
       Email_Admin,
-      Telefono_Admin
+      Telefono_Admin,
     });
     return newAdmin
   } catch (error) {

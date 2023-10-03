@@ -10,10 +10,20 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Contract.belongsToMany(models.jointTenant,{
-        through:"contract_jointTenant",    
-          as:"jointTennants"
+      
+      Contract.belongsToMany(models.Jointtenant,{
+        through:"contractJointTenants",    
+          as:"Jointtenants"
         })
+
+      Contract.belongsToMany(models.Service,{
+        through:"ContractServices",
+        as:"Services"
+      })
+
+      Contract.belongsTo(models.Home);
+      models.Home.hasMany(Contract);
+
       // define association here
       // contrato_servicios.belongsTo(models.contratos);
       // contratos.hasMany(contrato_servicios)
@@ -40,7 +50,8 @@ module.exports = (sequelize, DataTypes) => {
     Fecha_Pago: DataTypes.DATE,
     Estado_Contrato: DataTypes.STRING,
     Servicios_Incluidos: DataTypes.STRING,
-    FKCodigo_Vivienda: DataTypes.INTEGER
+    HomeId: DataTypes.INTEGER,
+    OwnerContractId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Contract',

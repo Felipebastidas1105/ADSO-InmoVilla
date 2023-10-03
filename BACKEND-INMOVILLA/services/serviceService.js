@@ -2,7 +2,7 @@ const db = require('../models');
 
 const getAll = async () => {
     try {
-      let admins = await db.Agent.findAll()
+      let admins = await db.Service.findAll()
       return admins
     } catch (error) {
   
@@ -11,19 +11,18 @@ const getAll = async () => {
   
   const get = async (id) => {
     try {
-      let agent = await db.Agent.findByPk(id);
+      let agent = await db.Service.findByPk(id);
       return agent
     } catch (error) {
   
     }
   }
   
-  const create = async (Nombre_Agente, Email_Agente, Telefono_Agente) => {
+  const create = async (Id_Servicios, Nombre_Servicios) => {
     try {
-      let newAdmin = await db.Agent.create({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      let newAdmin = await db.Service.create({
+       Id_Servicios,
+       Nombre_Servicios
       });
       return newAdmin
     } catch (error) {
@@ -31,12 +30,11 @@ const getAll = async () => {
     }
   }
   
-  const update = async (id,Nombre_Agente,Email_Agente,Telefono_Agente) => {
+  const update = async (id,Id_Servicios, Nombre_Servicios) => {
     try {
-      const updated = await db.Agent.update({
-        Nombre_Agente,
-        Email_Agente,
-        Telefono_Agente
+      const updated = await db.Service.update({
+        Id_Servicios,
+        Nombre_Servicios
       },
       {
         where: {
@@ -54,7 +52,7 @@ const getAll = async () => {
   
   const destroy = async (id) => {
     try {
-      let deleted = await db.Agent.destroy({
+      let deleted = await db.Service.destroy({
         where:{
           id:id
         }

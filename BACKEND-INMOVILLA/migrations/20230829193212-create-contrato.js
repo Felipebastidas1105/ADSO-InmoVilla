@@ -9,19 +9,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Cedula: {
-        type: Sequelize.INTEGER
-      },
-      Nombre: {
-        type: Sequelize.STRING
-      },
-      Fecha_Nac: {
+      Fecha_Ini: {
         type: Sequelize.DATE
       },
-      Telefono: {
-        type: Sequelize.STRING
+      Fecha_Fin: {
+        type: Sequelize.DATE
       },
-      Email: {
+      Vigencia: {
+        type: Sequelize.DATE
+      },
+      Precio:{
         type: Sequelize.STRING
       },
       Fecha_Pago: {
@@ -33,8 +30,28 @@ module.exports = {
       Servicios_Incluidos: {
         type: Sequelize.STRING
       },
-      Codigo_Vivienda: {
-        type: Sequelize.INTEGER
+      Cantidad_Habitantes:{
+        type: Sequelize.STRING
+      },
+      HomeId: {
+        type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"Homes",
+            key:"id",
+          }
+        }
+      },
+      OwnerContractId: {
+         type: Sequelize.INTEGER,
+        allowNull:false,
+        references:{
+          model:{
+            tableName:"owner_contracts",
+            key:"id"
+          }
+        }
       },
       createdAt: {
         allowNull: false,

@@ -11,6 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Rentpayment.belongsTo(models.Contract);
+      models.Contract.hasMany(Rentpayment);
+
     }
   }
   Rentpayment.init({
@@ -19,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     Medio_Pago: DataTypes.STRING,
     Estado_Pago: DataTypes.STRING,
     Valor_Pago: DataTypes.DOUBLE,
-    FKCodigo_Contrato: DataTypes.INTEGER
+    CodigoContratoId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Rentpayment',
