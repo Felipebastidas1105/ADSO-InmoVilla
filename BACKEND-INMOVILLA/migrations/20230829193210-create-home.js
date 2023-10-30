@@ -36,6 +36,9 @@ module.exports = {
       Descripcion: {
         type: Sequelize.STRING
       },
+      Imagen: {
+        type: Sequelize.STRING
+      },
       Tiene_Garaje_Moto: {
         type: Sequelize.STRING
       },
