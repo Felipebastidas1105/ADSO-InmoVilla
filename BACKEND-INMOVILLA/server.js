@@ -3,23 +3,28 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan'); // El nombre correcto de la dependencia es "morgan" en lugar de "morgar".
 //Configuracion del multer
-const multer = require('multer');
-const path = require('path');
+// const multer = require('multer');
+// const path = require('path');
 
-const storage = multer.diskStorage({
-  destination: function(req, file, cb) {
-    cb(null, 'uploads/');
-  },
-  filename: function(req, file, cb) {
-    const fecha = new Date().toISOString().replace(/[^0-9]/g, '');
-    const nuevoNombre = `${fecha}_${file.originalname}`;
-    cb(null, nuevoNombre);
-  }
-});
+//Incluimos el modulo de cors 
+const cors = require('cors')
 
-const upload = multer({ storage: storage });
+// const storage = multer.diskStorage({
+//   destination: function(req, file, cb) {
+//     cb(null, 'uploads/');
+//   },
+//   filename: function(req, file, cb) {
+//     const fecha = new Date().toISOString().replace(/[^0-9]/g, '');
+//     const nuevoNombre = `${fecha}_${file.originalname}`;
+//     cb(null, nuevoNombre);
+//   }
+// });
+
+// const upload = multer({ storage: storage });
 
 const app = express();
+
+app.use(cors())
 
 app.set('port', process.env.PORT || 4000);
 
@@ -27,10 +32,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(morgan('dev'));
 
-app.post('/upload', upload.single('Imagen'), function (req, res) {
-  console.log(req.file.filename);
-  res.send(req.file);
-});
+// app.post('/upload', upload.single('Imagen'), function (req, res) {
+//   console.log(req.file.filename);
+//   res.send(req.file);
+// });
 
 app.use('/api/v1/admin', require('./api/v1/routes/administrator.routes'));
 app.use('/api/v1/agent', require('./api/v1/routes/agent.routes'));
