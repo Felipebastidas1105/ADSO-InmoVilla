@@ -18,7 +18,7 @@ const get = async (id) => {
   }
 }
 
-const create = async (Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas_Extra,Tiene_Servicios_Incluidos,Tipo_Objeto,Area_Inmueble,Precio,Descripcion,Tiene_Garaje_Moto,Tipo_Vivienda,Tiene_Garaje_Carro,Tiene_Patio,Cant_Baños,Precio_Venta,AgentId,TypehousingId,TypetargetId) => {
+const create = async (Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas_Extra,Tiene_Servicios_Incluidos,Tipo_Objeto,Area_Inmueble,Precio,Descripcion,Imagen,Tiene_Garaje_Moto,Tipo_Vivienda,Tiene_Garaje_Carro,Tiene_Patio,Cant_Baños,Precio_Venta,AgentId,TypehousingId,TypetargetId) => {
   try {
     let newAdmin = await db.Home.create({
         Codigo_Vivienda,
@@ -30,6 +30,7 @@ const create = async (Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas_Ext
         Area_Inmueble,
         Precio,
         Descripcion,
+        Imagen,
         Tiene_Garaje_Moto,
         Tipo_Vivienda,
         Tiene_Garaje_Carro,
@@ -47,7 +48,7 @@ const create = async (Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas_Ext
   }
 }
 
-const update = async (id, Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas_Extra,Tiene_Servicios_Incluidos,Tipo_Objeto,Area_Inmueble,Precio,Descripcion,Tiene_Garaje_Moto,Tipo_Vivienda,Tiene_Garaje_Carro,Tiene_Patio,Cant_Baños,Precio_Venta) => {
+const update = async (id, Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas_Extra,Tiene_Servicios_Incluidos,Tipo_Objeto,Area_Inmueble,Precio,Descripcion,Imagen,Tiene_Garaje_Moto,Tipo_Vivienda,Tiene_Garaje_Carro,Tiene_Patio,Cant_Baños,Precio_Venta) => {
   try {
     const updated = await db.Home.update({
         Codigo_Vivienda,
@@ -59,6 +60,7 @@ const update = async (id, Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas
         Area_Inmueble,
         Precio,
         Descripcion,
+        Imagen,
         Tiene_Garaje_Moto,
         Tipo_Vivienda,
         Tiene_Garaje_Carro,
