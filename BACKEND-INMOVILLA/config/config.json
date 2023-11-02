@@ -21,9 +21,9 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "inmovilla_user",
-    "password": "9LvxbldogCJVn2CmTOBUIaznNZnLhki7",
-    "database": "inmovilla",
+    "username": "inmovilla",
+    "password": "7QmdVS2vp72SVcqPbK3oKOq2mLxUVXgm",
+    "database": "db_api_inmovilla",
     "host": "oregon-postgres.render.com",
     "dialect": "postgres",
     "dialectOptions":{
