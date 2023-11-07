@@ -37,6 +37,8 @@ app.use(morgan('dev'));
 //   res.send(req.file);
 // });
 
+app.use('/api/v1/user', require('./api/v1/routes/user.routes'))
+app.use('/api/v1/auth', require('./api/v1/routes/auth.routes'))
 app.use('/api/v1/admin', require('./api/v1/routes/administrator.routes'));
 app.use('/api/v1/agent', require('./api/v1/routes/agent.routes'));
 app.use('/api/v1/jointTenant', require('./api/v1/routes/jointTenant.routes'));
