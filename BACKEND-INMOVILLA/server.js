@@ -6,6 +6,8 @@ const morgan = require('morgan'); // El nombre correcto de la dependencia es "mo
 // const multer = require('multer');
 // const path = require('path');
 
+require('dotenv').config();
+
 //Incluimos el modulo de cors 
 const cors = require('cors')
 

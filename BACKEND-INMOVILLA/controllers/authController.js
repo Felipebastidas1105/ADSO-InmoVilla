@@ -14,7 +14,7 @@ module.exports = {
           expiresIn: 60 * 60 * 24,
         });
         // return res.status(200).json({ token, rol: data.user.rol });
-        return res.status(200).json(data);
+        return res.status(200).json({token});
       }
       return res.status(data.status).json(data);
     } catch (error) {
