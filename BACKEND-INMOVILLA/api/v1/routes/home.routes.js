@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const homeController = require("../../../controllers/homeController");
 const multer = require("multer");
-const path = require("path");
+
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -20,7 +20,7 @@ const router = Router();
 
 router.get("/", homeController.getAll);
 router.get("/:id", homeController.get);
-router.post("/",upload.single('Imagen'), homeController.create);
+router.post("/", upload.single("Imagen"), homeController.create);
 router.put("/:id", homeController.update);
 router.delete("/:id", homeController.destroy);
 
