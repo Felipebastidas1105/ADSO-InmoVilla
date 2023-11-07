@@ -20,6 +20,7 @@ const get = async (id) => {
 
 const create = async (Codigo_Vivienda,Ubicacion,Cant_Cuartos,Caracteristicas_Extra,Tiene_Servicios_Incluidos,Tipo_Objeto,Area_Inmueble,Precio,Descripcion,Imagen,Tiene_Garaje_Moto,Tipo_Vivienda,Tiene_Garaje_Carro,Tiene_Patio,Cant_Baños,Precio_Venta,AgentId,TypehousingId,TypetargetId) => {
   try {
+    
     let newAdmin = await db.Home.create({
         Codigo_Vivienda,
         Ubicacion,

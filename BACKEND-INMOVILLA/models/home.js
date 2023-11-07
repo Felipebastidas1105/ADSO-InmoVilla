@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
     Area_Inmueble: DataTypes.STRING,
     Precio: DataTypes.DOUBLE,
     Descripcion: DataTypes.STRING,
-    Imagen:DataTypes.STRING,
+    Imagen:DataTypes.ARRAY(DataTypes.STRING),
     Tiene_Garaje_Moto: DataTypes.STRING,
     Tipo_Vivienda: DataTypes.STRING,
     Tiene_Garaje_Carro: DataTypes.STRING,

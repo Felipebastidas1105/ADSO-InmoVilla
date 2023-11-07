@@ -1,6 +1,28 @@
 // controllers/administradorController.js
+const cloudinary = require('cloudinary').v2;
+// const {cloudinary} = require('cloudinary')
 const HomeService = require('../services/homeService');
+const path = require("path");
 
+cloudinary.config({ 
+  cloud_name: 'dxnsmwmgv', 
+  api_key: '932146274449616', 
+  api_secret: 'fXljMMXVvDRFHmO9179G1NZS1AA' 
+});
+const watermarkImage = 'https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699320470/ekpmncyy9bp5py5iadfc.webp';
+
+const imageSize = { width: 200, height: 200 }; 
+const watermarkSize = {
+  width: imageSize.width * 0.1, 
+  height: imageSize.height * 0.1,
+};
+const overlayOptions = {
+    overlay: watermarkImage,
+    width: watermarkSize.width,
+    height: watermarkSize.height,
+    gravity: 'south_east',
+    opacity: 80, 
+  };
 
   const getAll = async (req, res) => {
     try {
@@ -21,17 +43,49 @@ const HomeService = require('../services/homeService');
     }
   }
 
-  const create = async (req, res) =>  {
+  const create = async (req, res) => {
     const data = req.body;
-    const file = req.file;
-    const Imagen = `/uploads/${file.originalname}`
+    const files = req.files;
+    const Imagen = [];
     try {
-      const nuevoAdministrador = await HomeService.create(data.Codigo_Vivienda, data.Ubicacion, data.Cant_Cuartos, data.Caracteristicas_Extra, data.Tiene_Servicios_Incluidos, data.Tipo_Objeto, data.Area_Inmueble, data.Precio, data.Descripcion,Imagen, data.Tiene_Garaje_Moto,data.Tipo_Vivienda,data.Tiene_Garaje_Carro,data.Tiene_Patio,data.Cant_Baños,data.Precio_Venta,data.AgentId,data.TypehousingId,data.TypetargetId);
+      for (const file of files) {
+        const filePath = path.join(__dirname, "..", "uploads", file.filename);
+        const response = await cloudinary.uploader.upload(filePath);
+        console.log(response)
+        Imagen.push(response.secure_url)
+      }
+      console.log(Imagen)
+      
+      const nuevoAdministrador = await HomeService.create(
+        data.Codigo_Vivienda,
+        data.Ubicacion,
+        data.Cant_Cuartos,
+        data.Caracteristicas_Extra,
+        data.Tiene_Servicios_Incluidos,
+        data.Tipo_Objeto,
+        data.Area_Inmueble,
+        data.Precio,
+        data.Descripcion,
+        Imagen,
+        data.Tiene_Garaje_Moto,
+        data.Tipo_Vivienda,
+        data.Tiene_Garaje_Carro,
+        data.Tiene_Patio,
+        data.Cant_Baños,
+        data.Precio_Venta,
+        data.AgentId,
+        data.TypehousingId,
+        data.TypetargetId
+      );
+  
       res.status(201).json(nuevoAdministrador);
     } catch (error) {
+      // Maneja el error de carga de imagen y otros errores aquí
+      console.error("Error en el bloque catch:", error);
       res.status(500).json({ error: error.message });
     }
-  }
+  };
+  
 
   const update= async (req, res) =>  {
     let id  = req.params.id;
