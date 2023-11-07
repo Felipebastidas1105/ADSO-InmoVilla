@@ -45,21 +45,17 @@ const overlayOptions = {
 
   const create = async (req, res) => {
     const data = req.body;
-    const file = req.file;
-    const filePath = path.join(__dirname, "..", "uploads", file.filename);
-    console.log(file.originalname)
+    const files = req.files;
+    const Imagen = [];
     try {
-      const response = await cloudinary.uploader.upload(filePath, { overlay: overlayOptions }, function (error, result) {
-        if (error) {
-          console.error(error);
-        } else {
-          console.log(result);
-        }
-      });
-      const Imagen = response.secure_url;
+      for (const file of files) {
+        const filePath = path.join(__dirname, "..", "uploads", file.filename);
+        const response = await cloudinary.uploader.upload(filePath);
+        console.log(response)
+        Imagen.push(response.secure_url)
+      }
       console.log(Imagen)
-      console.log(response)
-  
+      
       const nuevoAdministrador = await HomeService.create(
         data.Codigo_Vivienda,
         data.Ubicacion,

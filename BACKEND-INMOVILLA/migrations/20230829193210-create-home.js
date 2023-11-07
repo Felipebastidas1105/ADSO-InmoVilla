@@ -37,7 +37,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       Imagen: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       Tiene_Garaje_Moto: {
         type: Sequelize.STRING

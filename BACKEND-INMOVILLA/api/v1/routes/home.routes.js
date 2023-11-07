@@ -20,7 +20,7 @@ const router = Router();
 
 router.get("/", homeController.getAll);
 router.get("/:id", homeController.get);
-router.post("/", upload.single("Imagen"), homeController.create);
+router.post("/", upload.array("Images"), homeController.create);
 router.put("/:id", homeController.update);
 router.delete("/:id", homeController.destroy);
 
