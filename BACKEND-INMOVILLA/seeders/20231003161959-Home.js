@@ -18,10 +18,10 @@ module.exports = {
           Descripcion:
             "Esta es una casa de campo ubicada en una zona residencial de manizales",
           Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458930/zxzsplhzfqcekku3rjqc.jpg",
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458931/xqpvcualgpuvlab1mecu.jpg",
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458932/fqxpp5luuvt6sa4301lz.jpg",
-          ],
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg"
+        ],
           Tiene_Garaje_Moto: "si",
           Tipo_Vivienda: "Casa",
           Tiene_Garaje_Carro: "Si",
@@ -46,10 +46,10 @@ module.exports = {
           Descripcion:
             "Esta es un apartamento ubicado en una zona residencial de manizales",
           Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458930/zxzsplhzfqcekku3rjqc.jpg",
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458931/xqpvcualgpuvlab1mecu.jpg",
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458932/fqxpp5luuvt6sa4301lz.jpg",
-          ],
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg"
+        ],
           Tiene_Garaje_Moto: "si",
           Tipo_Vivienda: "Apartamento",
           Tiene_Garaje_Carro: "No",
@@ -73,11 +73,11 @@ module.exports = {
           Precio: "5000000",
           Descripcion:
             "Esta es una casa ubicada en una zona exclusiva de Bogotá",
-            "Imagen": [
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458930/zxzsplhzfqcekku3rjqc.jpg",
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458931/xqpvcualgpuvlab1mecu.jpg",
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458932/fqxpp5luuvt6sa4301lz.jpg"
-          ],
+          Imagen: [
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg"
+        ],
           Tiene_Garaje_Moto: "No",
           Tipo_Vivienda: "Casa",
           Tiene_Garaje_Carro: "Si",
@@ -101,11 +101,11 @@ module.exports = {
           Precio: "3500000",
           Descripcion:
             "Este es un apartamento moderno con una vista espectacular de la ciudad",
-            "Imagen": [
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458930/zxzsplhzfqcekku3rjqc.jpg",
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458931/xqpvcualgpuvlab1mecu.jpg",
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699458932/fqxpp5luuvt6sa4301lz.jpg"
-          ],
+          Imagen: [
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg"
+        ],
           Tiene_Garaje_Moto: "No",
           Tipo_Vivienda: "Apartamento",
           Tiene_Garaje_Carro: "Sí",
