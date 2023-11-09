@@ -2,8 +2,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan'); // El nombre correcto de la dependencia es "morgan" en lugar de "morgar".
-<<<<<<< HEAD
-=======
 //Configuracion del multer
 // const multer = require('multer');
 // const path = require('path');
@@ -11,7 +9,6 @@ const morgan = require('morgan'); // El nombre correcto de la dependencia es "mo
 require('dotenv').config();
 
 //Incluimos el modulo de cors 
->>>>>>> feature/BACK-001
 const cors = require('cors')
 const path = require('path');
 
