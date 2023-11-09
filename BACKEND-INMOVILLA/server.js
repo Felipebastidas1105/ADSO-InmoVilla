@@ -2,6 +2,16 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan'); // El nombre correcto de la dependencia es "morgan" en lugar de "morgar".
+<<<<<<< HEAD
+=======
+//Configuracion del multer
+// const multer = require('multer');
+// const path = require('path');
+
+require('dotenv').config();
+
+//Incluimos el modulo de cors 
+>>>>>>> feature/BACK-001
 const cors = require('cors')
 const path = require('path');
 
@@ -20,7 +30,8 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname,'uploads')))
 
 
-app.use('/api/v1/admin', require('./api/v1/routes/administrator.routes'));
+app.use('/api/v1/user', require('./api/v1/routes/user.routes'))
+app.use('/api/v1/auth', require('./api/v1/routes/auth.routes'))
 app.use('/api/v1/agent', require('./api/v1/routes/agent.routes'));
 app.use('/api/v1/jointTenant', require('./api/v1/routes/jointTenant.routes'));
 app.use('/api/v1/contract', require('./api/v1/routes/contract.routes'));
