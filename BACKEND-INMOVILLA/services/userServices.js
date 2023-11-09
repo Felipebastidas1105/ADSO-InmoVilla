@@ -6,7 +6,7 @@ const getAll = async () => {
     let admins = await db.User.findAll()
     return admins
   } catch (error) {
-
+    throw { status: 400, message: error.message || "failed to get users" }
   }
 }
 
@@ -19,48 +19,59 @@ const get = async (id) => {
   }
 }
 
-const create = async (email,password) => {
+const create = async (nombres, apellidos, cedula, fechaNac, telefono, email, password,RolId) => {
   try {
     let newAdmin = await db.User.create({
-        email,
-        password
+      nombres,
+      apellidos,
+      cedula,
+      fechaNac,
+      telefono,
+      email,
+      password,
+      RolId
     });
     return newAdmin
   } catch (error) {
-    throw {status: 400, message: error.message || "failed to create admin"};
+    throw { status: 400, message: error.message || "failed to create admin" };
   }
 }
 
-const update = async (id,email,password) => {
+const update = async (id, nombres, apellidos, cedula, fechaNac, telefono, email, password) => {
   try {
     const admin = await db.User.update({
-        email,
-        password
+      nombres,
+      apellidos,
+      cedula,
+      fechaNac,
+      telefono,
+      email,
+      password
     },
-    {
-      where: {
-        id:id
+      {
+        where: {
+          id: id
+        }
       }
-    }
     );
     return admin
   } catch (error) {
-    throw {status: 400, message: error.message || "failed to update admin"};
+    throw { status: 400, message: error.message || "failed to update admin" };
   }
-  
-  
+
+
 }
 
 const destroy = async (id) => {
   try {
     let deletedAdmin = await db.User.destroy({
-      where:{
-        id:id
+      where: {
+        id: id
       }
     });
     return deletedAdmin
   } catch (error) {
-    throw {status: 400, message: error.message || "failed to delete admin"};
+    throw { status: 400, message: error.message || "failed to delete admin" };
   }
 }
 
