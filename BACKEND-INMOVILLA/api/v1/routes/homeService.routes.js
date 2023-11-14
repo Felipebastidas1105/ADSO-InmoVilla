@@ -1,14 +1,14 @@
 const {Router} = require('express')
 const homeServiceController = require('../../../controllers/homeServiceController')
-
+const verify = require('../../../middlewares/jwt')
 
 const router = Router()
 
 
-router.get('/', homeServiceController.getAll)
-router.get('/:id', homeServiceController.get)
-router.post('/',homeServiceController.create)
-router.put('/:id',homeServiceController.update)
-router.delete('/:id',homeServiceController.destroy)
+router.get('/',/*verify,*/homeServiceController.getAll)
+router.get('/:id',/*verify,*/homeServiceController.get)
+router.post('/',/*verify,*/homeServiceController.create)
+router.put('/:id',/*verify,*/homeServiceController.update)
+router.delete('/:id',/*verify,*/homeServiceController.destroy)
 
 module.exports = router;

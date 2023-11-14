@@ -1,14 +1,13 @@
 const {Router} = require('express')
 const ownerController = require('../../../controllers/ownerrController')
-
+const verify = require('../../../middlewares/jwt')
 
 const router = Router()
 
-
-router.get('/', ownerController.getAll)
-router.get('/:id', ownerController.get)
-router.post('/',ownerController.create)
-router.put('/:id',ownerController.update)
-router.delete('/:id',ownerController.destroy)
+router.get('/',/*verify,*/ownerController.getAll)
+router.get('/:id',/*verify,*/ownerController.get)
+router.post('/',/*verify,*/ownerController.create)
+router.put('/:id',/*verify,*/ownerController.update)
+router.delete('/:id',/*verify,*/ownerController.destroy)
 
 module.exports = router
