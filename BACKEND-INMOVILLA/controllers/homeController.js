@@ -1,6 +1,7 @@
 // controllers/administradorController.js
 const cloudinary = require('cloudinary').v2;
 // const {cloudinary} = require('cloudinary')
+
 const HomeService = require('../services/homeService');
 const path = require("path");
 
@@ -9,20 +10,20 @@ cloudinary.config({
   api_key: '932146274449616', 
   api_secret: 'fXljMMXVvDRFHmO9179G1NZS1AA' 
 });
-const watermarkImage = 'https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699320470/ekpmncyy9bp5py5iadfc.webp';
+// const watermarkImage = 'https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699320470/ekpmncyy9bp5py5iadfc.webp';
 
-const imageSize = { width: 200, height: 200 }; 
-const watermarkSize = {
-  width: imageSize.width * 0.1, 
-  height: imageSize.height * 0.1,
-};
-const overlayOptions = {
-    overlay: watermarkImage,
-    width: watermarkSize.width,
-    height: watermarkSize.height,
-    gravity: 'south_east',
-    opacity: 80, 
-  };
+// const imageSize = { width: 200, height: 200 }; 
+// const watermarkSize = {
+//   width: imageSize.width * 0.1, 
+//   height: imageSize.height * 0.1,
+// };
+// const overlayOptions = {
+//     overlay: watermarkImage,
+//     width: watermarkSize.width,
+//     height: watermarkSize.height,
+//     gravity: 'south_east',
+//     opacity: 80, 
+//   };
 
   const getAll = async (req, res) => {
     try {
@@ -51,6 +52,7 @@ const overlayOptions = {
       for (const file of files) {
         const filePath = path.join(__dirname, "..", "uploads", file.filename);
         const response = await cloudinary.uploader.upload(filePath);
+
         console.log(response)
         Imagen.push(response.secure_url)
       }
