@@ -19,7 +19,7 @@ const get = async (id) => {
   }
 }
 
-const create = async (nombres, apellidos, cedula, fechaNac, telefono, email, password,RolId) => {
+const create = async (nombres, apellidos, cedula, fechaNac, telefono, email, password,role) => {
   try {
     let newAdmin = await db.User.create({
       nombres,
@@ -29,7 +29,7 @@ const create = async (nombres, apellidos, cedula, fechaNac, telefono, email, pas
       telefono,
       email,
       password,
-      RolId
+      role
     });
     return newAdmin
   } catch (error) {

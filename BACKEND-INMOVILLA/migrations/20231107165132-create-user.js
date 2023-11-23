@@ -41,16 +41,20 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      RolId: {
+      role: {
         type: Sequelize.INTEGER,
-        allowNull:false,
-        references:{
-          model:{
-            tableName:"Rols",
-            key:"id"
-          }
-        }
+        allowNull: false
       }
+      // RolId: {
+      //   type: Sequelize.INTEGER,
+      //   allowNull:false,
+      //   references:{
+      //     model:{
+      //       tableName:"Rols",
+      //       key:"id"
+      //     }
+      //   }
+      // }
     });
   },
   async down(queryInterface, Sequelize) {

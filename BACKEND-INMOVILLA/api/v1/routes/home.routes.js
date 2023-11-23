@@ -1,7 +1,8 @@
 const { Router } = require("express");
 const homeController = require("../../../controllers/homeController");
 const multer = require("multer");
-
+const { authenticateJWT, authorize } = require('../../../middlewares/auth')
+const roles = require('../../../utils/roles')
 
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
@@ -18,10 +19,10 @@ const upload = multer({ storage: storage });
 
 const router = Router();
 
-router.get("/", homeController.getAll);
-router.get("/:id", homeController.get);
-router.post("/", upload.array("Images"), homeController.create);
-router.put("/:id", homeController.update);
-router.delete("/:id", homeController.destroy);
+router.get("/", authenticateJWT, authorize([roles["ADMIN"]]), homeController.getAll);
+router.get("/:id", authenticateJWT, authorize([roles["ADMIN"]]), homeController.get);
+router.post("/", authenticateJWT, authorize([roles["ADMIN"]]), upload.array("Images"), homeController.create);
+router.put("/:id", authenticateJWT, authorize([roles["ADMIN"]]), homeController.update);
+router.delete("/:id", authenticateJWT, authorize([roles["ADMIN"]]), homeController.destroy);
 
 module.exports = router;
