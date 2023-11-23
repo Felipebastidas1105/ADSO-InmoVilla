@@ -19,10 +19,10 @@ const upload = multer({ storage: storage });
 
 const router = Router();
 
-router.get("/", authenticateJWT, authorize([roles["ADMIN"]]), homeController.getAll);
-router.get("/:id", authenticateJWT, authorize([roles["ADMIN"]]), homeController.get);
-router.post("/", authenticateJWT, authorize([roles["ADMIN"]]), upload.array("Images"), homeController.create);
-router.put("/:id", authenticateJWT, authorize([roles["ADMIN"]]), homeController.update);
-router.delete("/:id", authenticateJWT, authorize([roles["ADMIN"]]), homeController.destroy);
+router.get("/", authenticateJWT, homeController.getAll);
+router.get("/:id", authenticateJWT, homeController.get);
+router.post("/", authenticateJWT, upload.array("Images"), homeController.create);
+router.put("/:id", authenticateJWT, homeController.update);
+router.delete("/:id", authenticateJWT, homeController.destroy);
 
 module.exports = router;
