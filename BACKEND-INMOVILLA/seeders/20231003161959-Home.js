@@ -9,8 +9,8 @@ module.exports = {
         {
           Codigo_Vivienda: "1",
           Direccion: "Manizales,Caldas",
-          Latitud:22.1,
-          Longitud:33.1,
+          Latitud:5.067,
+          Longitud: -75.517,
           Cant_Cuartos: "3",
           Caracteristicas_Extra: "Tiene cancha de futbol",
           Tiene_Servicios_Incluidos: "Si",
