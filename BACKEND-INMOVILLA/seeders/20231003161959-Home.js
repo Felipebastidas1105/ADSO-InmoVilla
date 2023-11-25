@@ -8,7 +8,9 @@ module.exports = {
       [
         {
           Codigo_Vivienda: "1",
-          Ubicacion: "Manizales,Caldas",
+          Direccion: "Manizales,Caldas",
+          Latitud:22.1,
+          Longitud:33.1,
           Cant_Cuartos: "3",
           Caracteristicas_Extra: "Tiene cancha de futbol",
           Tiene_Servicios_Incluidos: "Si",
@@ -36,7 +38,9 @@ module.exports = {
         },
         {
           Codigo_Vivienda: "2",
-          Ubicacion: "Manizales,Caldas",
+          Direccion: "Manizales,Caldas",
+          Latitud:22.1,
+          Longitud:33.1,
           Cant_Cuartos: "2",
           Caracteristicas_Extra: "Tiene sauna",
           Tiene_Servicios_Incluidos: "Si",
@@ -64,7 +68,9 @@ module.exports = {
         },
         {
           Codigo_Vivienda: "3",
-          Ubicacion: "Bogotá, Cundinamarca",
+          Direccion: "Bogotá, Cundinamarca",
+          Latitud:22.1,
+          Longitud:33.1,
           Cant_Cuartos: "3",
           Caracteristicas_Extra: "Tiene piscina",
           Tiene_Servicios_Incluidos: "No",
@@ -92,7 +98,9 @@ module.exports = {
         },
         {
           Codigo_Vivienda: "4",
-          Ubicacion: "Medellín, Antioquia",
+          Direccion: "Medellín, Antioquia",
+          Latitud:22.1,
+          Longitud:33.1,
           Cant_Cuartos: "4",
           Caracteristicas_Extra: "Tiene vista panorámica",
           Tiene_Servicios_Incluidos: "Sí",

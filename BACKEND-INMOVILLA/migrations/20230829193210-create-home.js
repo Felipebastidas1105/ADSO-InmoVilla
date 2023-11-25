@@ -12,8 +12,14 @@ module.exports = {
       Codigo_Vivienda: {
         type: Sequelize.INTEGER
       },
-      Ubicacion: {
+      Direccion: {
         type: Sequelize.STRING
+      },
+      Latitud: {
+        type: Sequelize.DOUBLE
+      },
+      Longitud: {
+        type: Sequelize.DOUBLE
       },
       Cant_Cuartos: {
         type: Sequelize.STRING

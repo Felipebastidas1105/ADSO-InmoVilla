@@ -35,7 +35,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   Home.init({
     Codigo_Vivienda: DataTypes.INTEGER,
-    Ubicacion: DataTypes.STRING,
+    Direccion: DataTypes.STRING,
+    Latitud: DataTypes.DOUBLE,
+    Longitud: DataTypes.DOUBLE,
     Cant_Cuartos: DataTypes.STRING,
     Caracteristicas_Extra: DataTypes.STRING,
     Tiene_Servicios_Incluidos: DataTypes.STRING,
