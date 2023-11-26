@@ -22,8 +22,8 @@
   },
   "production": {
     "username": "inmovilla",
-    "password": "7QmdVS2vp72SVcqPbK3oKOq2mLxUVXgm",
-    "database": "db_api_inmovilla",
+    "password": "T19jZxk2u3vDYg8t30sp9hFcrP2gNsog",
+    "database": "db_api_inmovilla_5ggu",
     "host": "oregon-postgres.render.com",
     "dialect": "postgres",
     "dialectOptions":{
