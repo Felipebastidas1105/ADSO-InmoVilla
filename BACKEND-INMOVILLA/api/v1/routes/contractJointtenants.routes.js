@@ -1,14 +1,14 @@
 const {Router} = require('express')
 const contractJointtenantController = require('../../../controllers/contractJointtenantController')
-
+const verify = require('../../../middlewares/jwt')
 
 const router = Router()
 
 
-router.get('/', contractJointtenantController.getAll)
-router.get('/:id', contractJointtenantController.get)
-router.post('/',contractJointtenantController.create)
-router.put('/:id',contractJointtenantController.update)
-router.delete('/:id',contractJointtenantController.destroy)
+router.get('/',/*verify,*/contractJointtenantController.getAll)
+router.get('/:id',/*verify,*/contractJointtenantController.get)
+router.post('/',/*verify,*/contractJointtenantController.create)
+router.put('/:id',/*verify,*/contractJointtenantController.update)
+router.delete('/:id',/*verify,*/contractJointtenantController.destroy)
 
 module.exports = router;

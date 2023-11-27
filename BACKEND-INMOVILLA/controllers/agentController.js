@@ -21,6 +21,7 @@ const getAll = async (req, res) => {
 
   const create = async (req, res) =>  {
     const data = req.body;
+    console.log(data.body)
     try {
       const nuevoAdministrador = await agentService.create(data.Nombre_Agente, data.Email_Agente, data.Telefono_Agente);
       res.status(201).json(nuevoAdministrador);

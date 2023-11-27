@@ -12,8 +12,14 @@ module.exports = {
       Codigo_Vivienda: {
         type: Sequelize.INTEGER
       },
-      Ubicacion: {
+      Direccion: {
         type: Sequelize.STRING
+      },
+      Latitud: {
+        type: Sequelize.DOUBLE
+      },
+      Longitud: {
+        type: Sequelize.DOUBLE
       },
       Cant_Cuartos: {
         type: Sequelize.STRING
@@ -35,6 +41,9 @@ module.exports = {
       },
       Descripcion: {
         type: Sequelize.STRING
+      },
+      Imagen: {
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       Tiene_Garaje_Moto: {
         type: Sequelize.STRING

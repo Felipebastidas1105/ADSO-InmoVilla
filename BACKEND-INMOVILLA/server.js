@@ -1,16 +1,34 @@
 
 const express = require('express');
-const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan'); // El nombre correcto de la dependencia es "morgan" en lugar de "morgar".
+//Configuracion del multer
+// const multer = require('multer');
+// const path = require('path');
 
-app.set('port', process.env.PORT || 4000); // Debes usar 4000 en lugar de 400. Además, cierra correctamente el paréntesis de la función set.
+require('dotenv').config();
+
+//Incluimos el modulo de cors 
+const cors = require('cors')
+const path = require('path');
+
+
+
+const app = express();
+
+app.use(cors())
+
+app.set('port', process.env.PORT || 4000);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(morgan('dev')); // Cambia "morgar" a "morgan" para utilizar la dependencia correcta.
+app.use(morgan('dev'));
 
-app.use('/api/v1/admin', require('./api/v1/routes/administrator.routes'));
+app.use(express.static(path.join(__dirname,'uploads')))
+
+
+app.use('/api/v1/user', require('./api/v1/routes/user.routes'))
+app.use('/api/v1/auth', require('./api/v1/routes/auth.routes'))
 app.use('/api/v1/agent', require('./api/v1/routes/agent.routes'));
 app.use('/api/v1/jointTenant', require('./api/v1/routes/jointTenant.routes'));
 app.use('/api/v1/contract', require('./api/v1/routes/contract.routes'));

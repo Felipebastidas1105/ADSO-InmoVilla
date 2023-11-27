@@ -1,14 +1,14 @@
 const {Router} = require('express')
 const agentController = require('../../../controllers/agentController')
-
+const verify = require('../../../middlewares/jwt')
 
 const router = Router()
 
 
-router.get('/', agentController.getAll)
-router.get('/:id', agentController.get)
-router.post('/',agentController.create)
-router.put('/:id',agentController.update)
-router.delete('/:id',agentController.destroy)
+router.get('/',/*verify,*/agentController.getAll)
+router.get('/:id',/*verify,*/agentController.get)
+router.post('/',/*verify,*/agentController.create)
+router.put('/:id',/*verify,*/agentController.update)
+router.delete('/:id',/*verify,*/agentController.destroy)
 
 module.exports = router;
