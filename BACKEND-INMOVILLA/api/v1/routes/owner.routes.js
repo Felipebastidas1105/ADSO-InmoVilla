@@ -1,13 +1,15 @@
 const {Router} = require('express')
 const ownerController = require('../../../controllers/ownerrController')
-const verify = require('../../../middlewares/jwt')
+const { authenticateJWT, authorize } = require('../../../middlewares/auth')
+const roles = require('../../../utils/roles')
 
 const router = Router()
 
-router.get('/',/*verify,*/ownerController.getAll)
-router.get('/:id',/*verify,*/ownerController.get)
-router.post('/',/*verify,*/ownerController.create)
-router.put('/:id',/*verify,*/ownerController.update)
-router.delete('/:id',/*verify,*/ownerController.destroy)
+
+router.get('/', authenticateJWT, authorize([roles["ADMIN"]],[roles["AGENT"]]), ownerController.getAll)
+router.get('/:id', authenticateJWT, authorize([roles["ADMIN"]],[roles["AGENT"]]), ownerController.get)
+router.post('/', authenticateJWT, authorize([roles["ADMIN"]],[roles["AGENT"]]),ownerController.create)
+router.put('/:id', authenticateJWT, authorize([roles["ADMIN"]],[roles["AGENT"]]),ownerController.update)
+router.delete('/:id', authenticateJWT, authorize([roles["ADMIN"]],),ownerController.destroy)
 
 module.exports = router

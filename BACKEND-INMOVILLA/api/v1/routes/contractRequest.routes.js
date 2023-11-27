@@ -1,14 +1,15 @@
 const {Router} = require('express')
 const contractRequestController = require('../../../controllers/contractRequestController')
-const verify = require('../../../middlewares/jwt')
+const { authenticateJWT, authorize } = require('../../../middlewares/auth')
+const roles = require('../../../utils/roles')
 
 const router = Router()
 
 
-router.get('/',/*verify,*/contractRequestController.getAll)
-router.get('/:id',/*verify,*/contractRequestController.get)
-router.post('/',/*verify,*/contractRequestController.create)
-router.put('/:id',/*verify,*/contractRequestController.update)
-router.delete('/:id',/*verify,*/contractRequestController.destroy)
+router.get('/', authenticateJWT, authorize([roles["ADMIN"]]), contractRequestController.getAll)
+router.get('/:id', authenticateJWT, authorize([roles["ADMIN"]],[roles["USER"]],[roles["AGENT"]]), contractRequestController.get)
+router.post('/', authenticateJWT, authorize([roles["ADMIN"]],[roles["USER"]],[roles["AGENT"]]),contractRequestController.create)
+router.put('/:id', authenticateJWT, authorize([roles["ADMIN"]],[roles["AGENT"]]),contractRequestController.update)
+router.delete('/:id', authenticateJWT, authorize([roles["ADMIN"]], [roles["AGENT"]]),contractRequestController.destroy)
 
 module.exports = router;

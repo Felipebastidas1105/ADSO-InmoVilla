@@ -23,7 +23,7 @@ const getAll = async (req, res) => {
     const data = req.body;
     console.log(data)
     try {
-      const nuevoAdministrador = await userServices.create(data.nombres,data.apellidos,data.cedula,data.fechaNac,data.telefono,data.email,data.password,data.RolId);
+      const nuevoAdministrador = await userServices.create(data.nombres,data.apellidos,data.cedula,data.fechaNac,data.telefono,data.email,data.password,data.role);
       res.status(201).json(nuevoAdministrador);
     } catch (error) {
       res.status(500).json({ error: error.message });
