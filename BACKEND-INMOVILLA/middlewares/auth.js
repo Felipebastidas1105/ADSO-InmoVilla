@@ -7,6 +7,7 @@ const blacklistedTokens = require('../utils/blackListed');
 const authenticateUser = async (email, password) => {
     const secret = process.env.JWT_SECRET;
     const user = await db.User.findOne({ where: { email } });
+    console.log(user)
     if (!user) {
         throw new Error('No user found with this email address');
     }

@@ -6,7 +6,6 @@ const blacklistedTokens = require('../utils/blackListed');
 const login = async (req, res) => {
   const { email, password } = req.body;
   const secret = process.env.JWT_SECRET;
-
   try {
       const token = await authenticateUser(email, password);
       //save token in cookie and serialize using cookie express method
