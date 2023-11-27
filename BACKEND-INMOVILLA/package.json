@@ -26,7 +26,7 @@
     "create": "npx sequelize db:create",
     "migrate": "npx sequelize db:migrate",
     "migrate-undo": "npx sequelize db:migrate:undo:all",
-    "all": "npx sequelize db:migrate:undo:all && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "all": "npx sequelize db:seed:undo:all && sequelize db:migrate:undo:all && npx sequelize db:migrate && npx sequelize db:seed:all",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
