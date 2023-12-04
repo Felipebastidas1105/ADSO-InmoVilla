@@ -1,8 +1,8 @@
 const cloudinary = require("cloudinary").v2;
-const { v4: uuidv4 } = require('uuid');
+const { v4: uuidv4 } = require("uuid");
 const HomeService = require("../services/homeService");
 const path = require("path");
-const fs = require("fs")
+const fs = require("fs");
 
 cloudinary.config({
   cloud_name: "dxnsmwmgv",
@@ -28,34 +28,31 @@ const get = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
 const create = async (req, res) => {
   const data = req.body;
-  const files = req.files;
+  const images = req.files; // Supongamos que las imágenes están en req.body.images
+  console.log(images);
   const Imagen = [];
 
-  // Genera un identificador único para la casa fuera del bucle
   const casaId = FolderId();
-
   try {
-    for (const file of files) {
-      const filePath = path.join(__dirname, "..", "uploads", file.filename);
-
-      // Configura la carpeta en Cloudinary con el identificador único de la casa
+    for (const image of images) {
       const uploadOptions = {
         folder: `homes/${casaId}`,
       };
 
-      const response = await cloudinary.uploader.upload(filePath, uploadOptions);
+      const response = await cloudinary.uploader.upload(
+        image.path,
+        uploadOptions
+      );
 
       const imagen = {
         id: response.public_id,
         url: response.secure_url,
       };
       Imagen.push(imagen);
-      // fs.unlinkSync(filePath);
     }
-
-    console.log(Imagen);
 
     const nuevoAdministrador = await HomeService.create(
       data.Codigo_Vivienda,
@@ -78,7 +75,7 @@ const create = async (req, res) => {
       data.TypehousingId,
       data.TypetargetId
     );
-      
+
     res.status(201).json(nuevoAdministrador);
   } catch (error) {
     console.error("Error en el bloque catch:", error);
@@ -90,7 +87,6 @@ function FolderId() {
   const uuid = uuidv4();
   return `Home-${uuid}`;
 }
-
 
 // const create = async (req, res) => {
 //   const data = req.body;
@@ -206,7 +202,6 @@ const update = async (req, res) => {
 const destroy = async (req, res) => {
   let id = req.params.id;
   try {
-
     const homeInfo = await HomeService.get(id);
     const imagesToDelete = homeInfo.Imagen || [];
 
