@@ -16,9 +16,7 @@ const get = async (id) => {
   } catch (error) {}
 };
 
-const create = async (
-  Codigo_Vivienda,
-  Direccion,
+const create = async (Codigo_Vivienda,Direccion,
   Latitud,
   Longitud,
   Cant_Cuartos,
@@ -37,6 +35,7 @@ const create = async (
   TypehousingId,
   TypetargetId
 ) => {
+  
   try {
     let newAdmin = await db.Home.create({
       Codigo_Vivienda,
@@ -59,6 +58,7 @@ const create = async (
       TypehousingId,
       TypetargetId,
     });
+    console.log(newAdmin)
     return newAdmin;
   } catch (error) {
     console.log(error);

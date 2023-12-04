@@ -69,6 +69,7 @@ const create = async (req, res) => {
       //   id: response.public_id,
       //   url: response.secure_url,
       // };
+      console.log("imagen_url" + imagen)
       Imagen.push(imagen);
     }
 
@@ -93,6 +94,7 @@ const create = async (req, res) => {
       data.TypehousingId,
       data.TypetargetId
     );
+    console.log(nuevoAdministrador)
 
     res.status(201).json(nuevoAdministrador);
   } catch (error) {
