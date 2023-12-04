@@ -25,14 +25,12 @@ module.exports = {
         type: Sequelize.STRING
       },
       Caracteristicas_Extra: {
-        type: Sequelize.STRING
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
       Tiene_Servicios_Incluidos: {
         type: Sequelize.STRING
       },
-      Tipo_Objeto: {
-        type: Sequelize.STRING
-      },
+     
       Area_Inmueble: {
         type: Sequelize.STRING
       },
@@ -43,14 +41,15 @@ module.exports = {
         type: Sequelize.STRING
       },
       Imagen: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.JSONB
       },
+      // Imagen: {
+      //   type: Sequelize.ARRAY(Sequelize.STRING)
+      // },
       Tiene_Garaje_Moto: {
         type: Sequelize.STRING
       },
-      Tipo_Vivienda: {
-        type: Sequelize.STRING
-      },
+      
       Tiene_Garaje_Carro: {
         type: Sequelize.STRING
       },

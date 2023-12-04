@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Typehousing.init({
-    Nombre: DataTypes.STRING,
-    CodTipoVivienda: DataTypes.STRING
+    Nombre: DataTypes.STRING
+    
   }, {
     sequelize,
     modelName: 'Typehousing',

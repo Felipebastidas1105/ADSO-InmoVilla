@@ -50,6 +50,7 @@ module.exports = (sequelize, DataTypes) => {
     Fecha_Pago: DataTypes.DATE,
     Estado_Contrato: DataTypes.STRING,
     Servicios_Incluidos: DataTypes.STRING,
+    Constancia:DataTypes.JSONB,
     HomeId: DataTypes.INTEGER,
     OwnerContractId: DataTypes.INTEGER
   }, {

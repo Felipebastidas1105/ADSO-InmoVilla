@@ -18,10 +18,10 @@ const getAll = async () => {
     }
   }
   
-  const create = async (CodTipoVivienda,Nombre) => {
+  const create = async (Nombre) => {
     try {
       let newtTypeHousing = await db.Typehousing.create({
-        CodTipoVivienda,
+       
         Nombre
       });
       return newtTypeHousing
@@ -30,10 +30,10 @@ const getAll = async () => {
     }
   }
   
-  const update = async (id,CodTipoVivienda,Nombre) => {
+  const update = async (id,Nombre) => {
     try {
       const updated = await db.Typehousing.update({
-        CodTipoVivienda,
+        
         Nombre
       },
       {

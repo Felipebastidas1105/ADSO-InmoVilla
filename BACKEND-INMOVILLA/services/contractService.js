@@ -18,7 +18,7 @@ const get = async (id) => {
   }
 }
 
-const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Precio, Fecha_Pago, Estado_Contrato, Servicios_Incluidos, HomeId, OwnerContractId) => {
+const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Precio, Fecha_Pago, Estado_Contrato, Servicios_Incluidos,Constancia, HomeId, OwnerContractId) => {
   try {
     let newAdmin = await db.Contract.create({
       Fecha_Ini,
@@ -29,6 +29,7 @@ const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Preci
       Fecha_Pago,
       Estado_Contrato,
       Servicios_Incluidos,
+      Constancia,
       HomeId,
       OwnerContractId
     });
@@ -39,7 +40,7 @@ const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Preci
   }
 }
 
-const update = async (id, Fecha_Ini,Fecha_Fin,Vigencia,Cantidad_Habitantes,Precio,Fecha_Pago,Estado_Contrato,Servicios_Incluidos) => {
+const update = async (id, Fecha_Ini,Fecha_Fin,Vigencia,Cantidad_Habitantes,Precio,Fecha_Pago,Estado_Contrato,Servicios_Incluidos,nuevaConstancia) => {
   try {
     const updated = await db.Contract.update({
       Fecha_Ini,
@@ -50,6 +51,7 @@ const update = async (id, Fecha_Ini,Fecha_Fin,Vigencia,Cantidad_Habitantes,Preci
       Fecha_Pago,
       Estado_Contrato,
       Servicios_Incluidos,  
+      nuevaConstancia,
     },
       {
         where: {

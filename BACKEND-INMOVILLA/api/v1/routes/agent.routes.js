@@ -6,10 +6,10 @@ const roles = require('../../../utils/roles')
 const router = Router()
 
 
-router.get('/', authenticateJWT, authorize([roles["ADMIN"]]), agentController.getAll)
-router.get('/:id', authenticateJWT, authorize([roles["ADMIN"]]), agentController.get)
-router.post('/', authenticateJWT, authorize([roles["ADMIN"]]),agentController.create)
-router.put('/:id', authenticateJWT, authorize([roles["ADMIN"]]),agentController.update)
-router.delete('/:id', authenticateJWT, authorize([roles["ADMIN"]]),agentController.destroy)
+router.get('/', agentController.getAll)
+router.get('/:id', agentController.get)
+router.post('/',agentController.create)
+router.put('/:id',agentController.update)
+router.delete('/:id',agentController.destroy)
 
 module.exports = router;

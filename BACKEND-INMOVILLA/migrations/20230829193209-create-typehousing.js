@@ -12,9 +12,6 @@ module.exports = {
       Nombre: {
         type: Sequelize.STRING
       },
-      CodTipoVivienda: {
-        type: Sequelize.STRING
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

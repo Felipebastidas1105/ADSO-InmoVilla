@@ -30,6 +30,9 @@ module.exports = {
       Servicios_Incluidos: {
         type: Sequelize.STRING
       },
+      Constancia:{
+        type: Sequelize.JSONB
+      },
       Cantidad_Habitantes:{
         type: Sequelize.STRING
       },

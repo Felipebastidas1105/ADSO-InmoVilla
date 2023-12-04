@@ -1,5 +1,11 @@
 'use strict';
+const bcrypt = require('bcrypt');
 
+async function hashPassword(password) {
+  const saltRounds = 10;
+  const hashedPassword = await bcrypt.hash(password, saltRounds);
+  return hashedPassword;
+}
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -13,7 +19,7 @@ module.exports = {
         fechaNac:"2004-05-11",
         telefono:"3002972274",
         email:"Admin@gmail.com",
-        password:"admin",
+        password:await hashPassword('admin123'),
         createdAt: new Date(),
         updatedAt: new Date(),
         role: 202
