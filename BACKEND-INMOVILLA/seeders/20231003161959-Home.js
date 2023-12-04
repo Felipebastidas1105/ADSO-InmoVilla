@@ -18,14 +18,16 @@ module.exports = {
           Precio: "20000",
           Descripcion:
             "Esta es una casa de campo ubicada en una zona residencial de manizales",
-          Imagen: JSON.stringify({
-            public_id_1:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-            public_id_2:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
-            public_id_3:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
-          }),
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "si",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "No",
@@ -49,14 +51,16 @@ module.exports = {
           Precio: "20000",
           Descripcion:
             "Esta es un apartamento ubicado en una zona residencial de manizales",
-          Imagen: JSON.stringify({
-            public_id_1:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-            public_id_2:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
-            public_id_3:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
-          }),
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -80,14 +84,16 @@ module.exports = {
           Precio: "5000000",
           Descripcion:
             "Esta es una casa ubicada en una zona exclusiva de Bogotá",
-          Imagen: JSON.stringify({
-            public_id_1:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-            public_id_2:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
-            public_id_3:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
-          }),
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -111,14 +117,16 @@ module.exports = {
           Precio: "3500000",
           Descripcion:
             "Este es un apartamento moderno con una vista espectacular de la ciudad",
-          Imagen: JSON.stringify({
-            public_id_1:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-            public_id_2:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462883/fpaonkzqnzfiposfotjv.jpg",
-            public_id_3:
-              "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
-          }),
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Sí",
           Tiene_Patio: "No",
