@@ -30,6 +30,7 @@ module.exports = {
       Tiene_Servicios_Incluidos: {
         type: Sequelize.STRING
       },
+     
       Area_Inmueble: {
         type: Sequelize.STRING
       },
