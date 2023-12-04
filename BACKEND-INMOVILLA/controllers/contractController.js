@@ -57,7 +57,7 @@ const create = async (req, res) => {
       data.HomeId,
       data.OwnerContractId
     );
-    fs.unlinkSync(filePath);
+    // fs.unlinkSync(filePath);
     res.status(201).json(newContract);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -95,7 +95,7 @@ const update = async (req, res) => {
       nuevaConstancia
     );
 
-    fs.unlinkSync(filePath);
+    // fs.unlinkSync(filePath);
 
     await cloudinary.uploader.destroy(imagenAnteriorPublicId);
 

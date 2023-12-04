@@ -52,7 +52,7 @@ const create = async (req, res) => {
         url: response.secure_url,
       };
       Imagen.push(imagen);
-      fs.unlinkSync(filePath);
+      // fs.unlinkSync(filePath);
     }
 
     console.log(Imagen);
@@ -173,7 +173,7 @@ const update = async (req, res) => {
         url: response.secure_url,
       };
       Imagen.push(imagen);
-      fs.unlinkSync(filePath);
+      // fs.unlinkSync(filePath);
     }
 
     // Actualiza las imágenes en la base de datos
