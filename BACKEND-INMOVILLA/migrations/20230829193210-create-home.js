@@ -39,13 +39,13 @@ module.exports = {
       },
       Descripcion: {
         type: Sequelize.STRING
+      // },
+      // Imagen: {
+      //   type: Sequelize.JSONB
       },
       Imagen: {
-        type: Sequelize.JSONB
+        type: Sequelize.ARRAY(Sequelize.STRING)
       },
-      // Imagen: {
-      //   type: Sequelize.ARRAY(Sequelize.STRING)
-      // },
       Tiene_Garaje_Moto: {
         type: Sequelize.STRING
       },

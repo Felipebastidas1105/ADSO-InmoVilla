@@ -63,11 +63,12 @@ const create = async (req, res) => {
       //   image.path,
       //   uploadOptions
       // );
+      const imagen = response.secure_url
 
-      const imagen = {
-        id: response.public_id,
-        url: response.secure_url,
-      };
+      // const imagen = {
+      //   id: response.public_id,
+      //   url: response.secure_url,
+      // };
       Imagen.push(imagen);
     }
 
