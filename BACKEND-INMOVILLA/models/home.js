@@ -39,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     Latitud: DataTypes.DOUBLE,
     Longitud: DataTypes.DOUBLE,
     Cant_Cuartos: DataTypes.STRING,
-    Caracteristicas_Extra: DataTypes.ARRAY(DataTypes.STRING),
+    Caracteristicas_Extra: DataTypes.STRING,
     Tiene_Servicios_Incluidos: DataTypes.STRING,
     Area_Inmueble: DataTypes.STRING,
     Precio: DataTypes.DOUBLE,

@@ -25,12 +25,11 @@ module.exports = {
         type: Sequelize.STRING
       },
       Caracteristicas_Extra: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type:Sequelize.STRING
       },
       Tiene_Servicios_Incluidos: {
         type: Sequelize.STRING
       },
-     
       Area_Inmueble: {
         type: Sequelize.STRING
       },
