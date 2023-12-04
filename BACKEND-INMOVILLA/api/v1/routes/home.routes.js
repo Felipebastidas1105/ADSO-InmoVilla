@@ -4,7 +4,7 @@ const multer = require("multer");
 const { authenticateJWT, authorize } = require('../../../middlewares/auth')
 const roles = require('../../../utils/roles')
 
-const storage = multer.diskStorage({
+const storage = multer.memoryStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
   },

@@ -2,7 +2,8 @@ const cloudinary = require("cloudinary").v2;
 const { v4: uuidv4 } = require("uuid");
 const HomeService = require("../services/homeService");
 const path = require("path");
-const fs = require("fs");
+const axios = require('axios');
+const fs = require('fs');
 
 cloudinary.config({
   cloud_name: "dxnsmwmgv",
@@ -31,7 +32,7 @@ const get = async (req, res) => {
 
 const create = async (req, res) => {
   const data = req.body;
-  const images = req.files; // Supongamos que las imágenes están en req.body.images
+  const images = req.files; 
   console.log(images);
   const Imagen = [];
 
@@ -42,10 +43,26 @@ const create = async (req, res) => {
         folder: `homes/${casaId}`,
       };
 
-      const response = await cloudinary.uploader.upload(
-        image.path,
-        uploadOptions
-      );
+      const bytes = image.buffer
+      const buffer = Buffer.from(bytes)
+
+      const response = await new Promise((resolve,reject) =>{
+        cloudinary.uploader
+          .upload_stream({},(err,result)=>{
+            if (err) {
+              reject(err)
+            }
+            resolve(result)
+          })
+          .end(buffer)
+      })
+
+      console.log(response)
+
+      // const response = await cloudinary.uploader.upload(
+      //   image.path,
+      //   uploadOptions
+      // );
 
       const imagen = {
         id: response.public_id,
