@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
     Precio: DataTypes.DOUBLE,
     Descripcion: DataTypes.STRING,
     // Imagen:DataTypes.JSONB,
-    Imagen:DataTypes.ARRAY(DataTypes.STRING),
+    Imagen:DataTypes.JSONB,
     Tiene_Garaje_Moto: DataTypes.STRING,
     Tiene_Garaje_Carro: DataTypes.STRING,
     Tiene_Patio: DataTypes.STRING,

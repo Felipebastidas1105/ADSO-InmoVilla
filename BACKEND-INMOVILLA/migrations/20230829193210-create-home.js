@@ -44,7 +44,7 @@ module.exports = {
       //   type: Sequelize.JSONB
       },
       Imagen: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.JSONB
       },
       Tiene_Garaje_Moto: {
         type: Sequelize.STRING

@@ -4,7 +4,7 @@ const contractController = require("../../../controllers/contractController");
 const { authenticateJWT, authorize } = require("../../../middlewares/auth");
 const roles = require("../../../utils/roles");
 
-const storage = multer.diskStorage({
+const storage = multer.memoryStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
   },
@@ -40,6 +40,7 @@ router.post(
 );
 router.put(
   "/:id",
+  upload.single("PDF"),
   //   authenticateJWT,
   //   authorize([roles["ADMIN"]], [roles["AGENT"]]),
   contractController.update

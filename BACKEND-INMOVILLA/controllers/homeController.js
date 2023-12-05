@@ -2,8 +2,8 @@ const cloudinary = require("cloudinary").v2;
 const { v4: uuidv4 } = require("uuid");
 const HomeService = require("../services/homeService");
 const path = require("path");
-const axios = require('axios');
-const fs = require('fs');
+const axios = require("axios");
+const fs = require("fs");
 
 cloudinary.config({
   cloud_name: "dxnsmwmgv",
@@ -32,7 +32,7 @@ const get = async (req, res) => {
 
 const create = async (req, res) => {
   const data = req.body;
-  const images = req.files; 
+  const images = req.files;
   console.log(images);
   const Imagen = [];
 
@@ -43,33 +43,28 @@ const create = async (req, res) => {
         folder: `homes/${casaId}`,
       };
 
-      const bytes = image.buffer
-      const buffer = Buffer.from(bytes)
+      const bytes = image.buffer;
+      const buffer = Buffer.from(bytes);
 
-      const response = await new Promise((resolve,reject) =>{
+      const response = await new Promise((resolve, reject) => {
         cloudinary.uploader
-          .upload_stream({},(err,result)=>{
+          .upload_stream(uploadOptions, (err, result) => {
             if (err) {
-              reject(err)
+              reject(err);
             }
-            resolve(result)
+            resolve(result);
           })
-          .end(buffer)
-      })
+          .end(buffer);
+      });
 
-      console.log(response)
+      console.log(response);
 
-      // const response = await cloudinary.uploader.upload(
-      //   image.path,
-      //   uploadOptions
-      // );
-      const imagen = response.secure_url
+      const imagen = {
+        id: response.public_id,
+        url: response.secure_url,
+      };
 
-      // const imagen = {
-      //   id: response.public_id,
-      //   url: response.secure_url,
-      // };
-      console.log("imagen_url" + imagen)
+      console.log("imagen_url" + imagen);
       Imagen.push(imagen);
     }
 
@@ -94,7 +89,7 @@ const create = async (req, res) => {
       data.TypehousingId,
       data.TypetargetId
     );
-    console.log(nuevoAdministrador)
+    console.log(nuevoAdministrador);
 
     res.status(201).json(nuevoAdministrador);
   } catch (error) {
@@ -165,6 +160,7 @@ const update = async (req, res) => {
   let id = req.params.id;
   const data = req.body;
   const files = req.files;
+  const casaId = FolderId();
   try {
     const afterImages = await HomeService.get(id);
 
@@ -181,8 +177,23 @@ const update = async (req, res) => {
 
     const Imagen = [];
     for (const file of files) {
-      const filePath = path.join(__dirname, "..", "uploads", file.filename);
-      const response = await cloudinary.uploader.upload(filePath);
+      const bytes = file.buffer;
+      const buffer = Buffer.from(bytes);
+
+      const uploadOptions = {
+        folder: `homes/${casaId}`,
+      };
+      const response = await new Promise((resolve, reject) => {
+        cloudinary.uploader
+          .upload_stream(uploadOptions, (err, result) => {
+            if (err) {
+              reject(err);
+            }
+            resolve(result);
+          })
+          .end(buffer);
+      });
+      // const response = await cloudinary.uploader.upload(filePath);
 
       const imagen = {
         public_id: response.public_id,

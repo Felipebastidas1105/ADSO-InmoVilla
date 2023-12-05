@@ -32,13 +32,26 @@ const create = async (req, res) => {
   const file = req.file;
 
   try {
-    const filePath = path.join(__dirname, "..", "uploads", file.filename);
+    // const filePath = path.join(__dirname, "..", "uploads", file.filename);
+    const bytes = file.buffer;
+    const buffer = Buffer.from(bytes);
 
     const uploadOptions = {
       folder: `Constancias`,
     };
 
-    const response = await cloudinary.uploader.upload(filePath, uploadOptions);
+    // const response = await cloudinary.uploader.upload(filePath, uploadOptions);
+    const response = await new Promise((resolve, reject) => {
+      cloudinary.uploader
+        .upload_stream(uploadOptions, (err, result) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(result);
+          }
+        })
+        .end(buffer);
+    });
     const Constancia = {
       id: response.public_id,
       url: response.secure_url,
@@ -67,18 +80,35 @@ const create = async (req, res) => {
 const update = async (req, res) => {
   let id = req.params.id;
   const data = req.body;
+  const file = req.file;
+
   try {
     const contratoExistente = await contractService.get(id);
     const imagenAnteriorPublicId = contratoExistente.Constancia.id;
 
-    const file = req.file;
-    const filePath = path.join(__dirname, "..", "uploads", file.filename);
+    const bytes = file.buffer;
+    const buffer = Buffer.from(bytes);
+
     const uploadOptions = {
       folder: `Constancias`,
     };
-    const response = await cloudinary.uploader.upload(filePath, uploadOptions);
 
-    const nuevaConstancia = {
+    const response = await new Promise((resolve, reject) => {
+      cloudinary.uploader
+        .upload_stream(uploadOptions, (err, result) => {
+          if (err) {
+            reject(err);
+          } else {
+            resolve(result);
+          }
+        })
+        .end(buffer);
+    });
+    // const filePath = path.join(__dirname, "..", "uploads", file.filename);
+
+    // const response = await cloudinary.uploader.upload(filePath, uploadOptions);
+
+    const Constancia = {
       id: response.public_id,
       url: response.secure_url,
     };
@@ -92,7 +122,7 @@ const update = async (req, res) => {
       data.Fecha_Pago,
       data.Estado_Contrato,
       data.Servicios_Incluidos,
-      nuevaConstancia
+      Constancia
     );
 
     // fs.unlinkSync(filePath);

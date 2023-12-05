@@ -40,7 +40,7 @@ const create = async (Fecha_Ini, Fecha_Fin, Vigencia, Cantidad_Habitantes, Preci
   }
 }
 
-const update = async (id, Fecha_Ini,Fecha_Fin,Vigencia,Cantidad_Habitantes,Precio,Fecha_Pago,Estado_Contrato,Servicios_Incluidos,nuevaConstancia) => {
+const update = async (id, Fecha_Ini,Fecha_Fin,Vigencia,Cantidad_Habitantes,Precio,Fecha_Pago,Estado_Contrato,Servicios_Incluidos,Constancia) => {
   try {
     const updated = await db.Contract.update({
       Fecha_Ini,
@@ -51,7 +51,7 @@ const update = async (id, Fecha_Ini,Fecha_Fin,Vigencia,Cantidad_Habitantes,Preci
       Fecha_Pago,
       Estado_Contrato,
       Servicios_Incluidos,  
-      nuevaConstancia,
+      Constancia,
     },
       {
         where: {

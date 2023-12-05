@@ -18,9 +18,16 @@ module.exports = {
           Precio: "20000",
           Descripcion:
             "Esta es una casa de campo ubicada en una zona residencial de manizales",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.  cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "si",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "No",
@@ -44,9 +51,16 @@ module.exports = {
           Precio: "20000",
           Descripcion:
             "Esta es un apartamento ubicado en una zona residencial de manizales",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+            Imagen: JSON.stringify(
+              {
+                id: "prueba",
+                url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+              },
+              {
+                id: "prueba02",
+                url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+              }
+            ),
           Tiene_Garaje_Moto: "si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -70,9 +84,16 @@ module.exports = {
           Precio: "5000000",
           Descripcion:
             "Esta es una casa ubicada en una zona exclusiva de Bogotá",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+            Imagen: JSON.stringify(
+              {
+                id: "prueba",
+                url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+              },
+              {
+                id: "prueba02",
+                url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+              }
+            ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -96,19 +117,16 @@ module.exports = {
           Precio: "3500000",
           Descripcion:
             "Este es un apartamento moderno con una vista espectacular de la ciudad",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
-          // Imagen: JSON.stringify(
-          //   {
-          //     id: "prueba",
-          //     url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          //   },
-          //   {
-          //     id: "prueba02",
-          //     url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
-          //   }
-          // ),
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Sí",
           Tiene_Patio: "No",
@@ -131,9 +149,16 @@ module.exports = {
           Area_Inmueble: "150m2",
           Precio: "350000",
           Descripcion: "Amplia casa familiar en el corazón de Bogotá",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -156,9 +181,16 @@ module.exports = {
           Area_Inmueble: "80m2",
           Precio: "180000",
           Descripcion: "Apartamento acogedor con vista a la ciudad",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "No",
@@ -174,16 +206,23 @@ module.exports = {
           Codigo_Vivienda: "4",
           Direccion: "Cali,Valle del Cauca",
           Latitud: 3.4516,
-          Longitud: -76.5320,
+          Longitud: -76.532,
           Cant_Cuartos: "5",
           Caracteristicas_Extra: "Gimnasio y sauna",
           Tiene_Servicios_Incluidos: "Si",
           Area_Inmueble: "200m2",
           Precio: "500000",
           Descripcion: "Casa moderna con comodidades de lujo en Cali",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -198,17 +237,25 @@ module.exports = {
         {
           Codigo_Vivienda: "5",
           Direccion: "Cartagena,Bolívar",
-          Latitud: 10.3910,
+          Latitud: 10.391,
           Longitud: -75.4794,
           Cant_Cuartos: "3",
           Caracteristicas_Extra: "Cerca de la playa",
           Tiene_Servicios_Incluidos: "Si",
           Area_Inmueble: "120m2",
           Precio: "300000",
-          Descripcion: "Casa de estilo colonial en el centro histórico de Cartagena",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Descripcion:
+            "Casa de estilo colonial en el centro histórico de Cartagena",
+            Imagen: JSON.stringify(
+              {
+                id: "prueba",
+                url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+              },
+              {
+                id: "prueba02",
+                url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+              }
+            ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -231,9 +278,16 @@ module.exports = {
           Area_Inmueble: "180m2",
           Precio: "400000",
           Descripcion: "Chalet elegante con vistas a las montañas en Pereira",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -256,9 +310,16 @@ module.exports = {
           Area_Inmueble: "100m2",
           Precio: "250000",
           Descripcion: "Apartamento moderno con balcón en Barranquilla",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "No",
@@ -281,9 +342,16 @@ module.exports = {
           Area_Inmueble: "200m2",
           Precio: "500000",
           Descripcion: "Casa de playa con acceso directo al mar en Santa Marta",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -298,7 +366,7 @@ module.exports = {
         {
           Codigo_Vivienda: "9",
           Direccion: "Villavicencio,Meta",
-          Latitud: 4.1420,
+          Latitud: 4.142,
           Longitud: -73.6266,
           Cant_Cuartos: "3",
           Caracteristicas_Extra: "Cerca de parques naturales",
@@ -306,9 +374,16 @@ module.exports = {
           Area_Inmueble: "120m2",
           Precio: "280000",
           Descripcion: "Casa acogedora con jardín en Villavicencio",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -324,16 +399,23 @@ module.exports = {
           Codigo_Vivienda: "10",
           Direccion: "Cúcuta,Norte de Santander",
           Latitud: 7.8947,
-          Longitud: -72.4960,
+          Longitud: -72.496,
           Cant_Cuartos: "4",
           Caracteristicas_Extra: "Zona tranquila",
           Tiene_Servicios_Incluidos: "Si",
           Area_Inmueble: "150m2",
           Precio: "380000",
           Descripcion: "Amplia casa familiar en Cúcuta",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "No",
@@ -349,16 +431,23 @@ module.exports = {
           Codigo_Vivienda: "10",
           Direccion: "Cúcuta,Norte de Santander",
           Latitud: 7.8947,
-          Longitud: -72.4960,
+          Longitud: -72.496,
           Cant_Cuartos: "4",
           Caracteristicas_Extra: "Zona tranquila",
           Tiene_Servicios_Incluidos: "Si",
           Area_Inmueble: "150m2",
           Precio: "380000",
           Descripcion: "Amplia casa familiar en Cúcuta",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "No",
@@ -381,9 +470,16 @@ module.exports = {
           Area_Inmueble: "110m2",
           Precio: "250000",
           Descripcion: "Apartamento con encanto en el centro de Pasto",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -406,9 +502,16 @@ module.exports = {
           Area_Inmueble: "110m2",
           Precio: "250000",
           Descripcion: "Apartamento con encanto en el centro de Pasto",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -431,9 +534,16 @@ module.exports = {
           Area_Inmueble: "90m2",
           Precio: "200000",
           Descripcion: "Acogedora casa en el corazón de Armenia",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/mno345.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -456,9 +566,16 @@ module.exports = {
           Area_Inmueble: "180m2",
           Precio: "380000",
           Descripcion: "Amplia casa con diseño moderno en Manizales",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -481,9 +598,16 @@ module.exports = {
           Area_Inmueble: "120m2",
           Precio: "280000",
           Descripcion: "Casa encantadora en Popayán con jardín",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -506,9 +630,16 @@ module.exports = {
           Area_Inmueble: "120m2",
           Precio: "280000",
           Descripcion: "Casa encantadora en Popayán con jardín",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -531,9 +662,16 @@ module.exports = {
           Area_Inmueble: "110m2",
           Precio: "270000",
           Descripcion: "Apartamento moderno en el corazón de Bucaramanga",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
           Tiene_Patio: "Si",
@@ -549,16 +687,23 @@ module.exports = {
           Codigo_Vivienda: "18",
           Direccion: "Cali,Valle del Cauca",
           Latitud: 3.4516,
-          Longitud: -76.5320,
+          Longitud: -76.532,
           Cant_Cuartos: "4",
           Caracteristicas_Extra: "Patio amplio",
           Tiene_Servicios_Incluidos: "Si",
           Area_Inmueble: "150m2",
           Precio: "350000",
           Descripcion: "Casa con diseño contemporáneo en Cali",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -574,16 +719,23 @@ module.exports = {
           Codigo_Vivienda: "18",
           Direccion: "Cali,Valle del Cauca",
           Latitud: 3.4516,
-          Longitud: -76.5320,
+          Longitud: -76.532,
           Cant_Cuartos: "4",
           Caracteristicas_Extra: "Patio amplio",
           Tiene_Servicios_Incluidos: "Si",
           Area_Inmueble: "150m2",
           Precio: "350000",
           Descripcion: "Casa con diseño contemporáneo en Cali",
-          Imagen: [
-            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
-          ],
+          Imagen: JSON.stringify(
+            {
+              id: "prueba",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            },
+            {
+              id: "prueba02",
+              url: "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462884/vxo6dkiyzrdrcqiia1iz.jpg",
+            }
+          ),
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "No",
           Tiene_Patio: "Si",
@@ -594,7 +746,7 @@ module.exports = {
           TypetargetId: "1",
           createdAt: new Date(),
           updatedAt: new Date(),
-        }                                                                                                                                                        
+        },
       ],
       {}
     );
