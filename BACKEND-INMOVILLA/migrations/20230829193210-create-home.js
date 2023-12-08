@@ -63,7 +63,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       Estado:{
-        type: Sequelize.INTEGER,
+        type: Sequelize.STRING,
       },
       AgentId: {
         type: Sequelize.INTEGER,
