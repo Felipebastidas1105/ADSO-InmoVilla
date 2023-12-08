@@ -62,6 +62,9 @@ module.exports = {
       Precio_Venta: {
         type: Sequelize.STRING
       },
+      Estado:{
+        type: Sequelize.INTEGER,
+      },
       AgentId: {
         type: Sequelize.INTEGER,
         allowNull:false,

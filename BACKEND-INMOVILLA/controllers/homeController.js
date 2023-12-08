@@ -90,6 +90,7 @@ const create = async (req, res) => {
       data.Tiene_Patio,
       data.Cant_Baños,
       data.Precio_Venta,
+      data.Estado,
       data.AgentId,
       data.TypehousingId,
       data.TypetargetId
@@ -149,6 +150,7 @@ function FolderId() {
 //       data.Cant_Baños,
 //       data.Precio_Venta,
 //       data.AgentId,
+
 //       data.TypehousingId,
 //       data.TypetargetId
 //     );
@@ -210,7 +212,8 @@ const update = async (req, res) => {
       data.Tiene_Garaje_Carro,
       data.Tiene_Patio,
       data.Cant_Baños,
-      data.Precio_Venta
+      data.Precio_Venta,
+      data.Estado,
     );
 
     res.status(200).send({ status: "OK", data: administradorActualizado });

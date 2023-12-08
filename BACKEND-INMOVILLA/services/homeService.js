@@ -32,6 +32,7 @@ const create = async (Codigo_Vivienda,Direccion,
   Cant_Baños,
   Precio_Venta,
   AgentId,
+  Estado,
   TypehousingId,
   TypetargetId
 ) => {
@@ -54,6 +55,7 @@ const create = async (Codigo_Vivienda,Direccion,
       Tiene_Patio,
       Cant_Baños,
       Precio_Venta,
+      Estado,
       AgentId,
       TypehousingId,
       TypetargetId,
@@ -83,7 +85,8 @@ const update = async (
   Tiene_Garaje_Carro,
   Tiene_Patio,
   Cant_Baños,
-  Precio_Venta
+  Precio_Venta,
+  Estado,
 ) => {
   try {
     const updated = await db.Home.update(
@@ -104,6 +107,7 @@ const update = async (
         Tiene_Patio,
         Cant_Baños,
         Precio_Venta,
+        Estado,
       },
       {
         where: {
