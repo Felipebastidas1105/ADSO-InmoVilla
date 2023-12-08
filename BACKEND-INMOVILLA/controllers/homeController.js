@@ -91,6 +91,7 @@ const create = async (req, res) => {
       data.Cant_Baños,
       data.Precio_Venta,
       data.Estado,
+      data.Amueblado,
       data.AgentId,
       data.TypehousingId,
       data.TypetargetId
@@ -214,6 +215,7 @@ const update = async (req, res) => {
       data.Cant_Baños,
       data.Precio_Venta,
       data.Estado,
+      data.Amueblado,
     );
 
     res.status(200).send({ status: "OK", data: administradorActualizado });

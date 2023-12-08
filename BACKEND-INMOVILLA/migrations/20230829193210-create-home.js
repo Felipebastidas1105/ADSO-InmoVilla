@@ -65,6 +65,9 @@ module.exports = {
       Estado:{
         type: Sequelize.STRING,
       },
+      Amueblado:{
+        type: Sequelize.STRING,
+      },
       AgentId: {
         type: Sequelize.INTEGER,
         allowNull:false,
