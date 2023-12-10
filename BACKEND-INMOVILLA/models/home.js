@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Home.init({
-    Codigo_Vivienda: DataTypes.INTEGER,
+    Codigo_Vivienda: DataTypes.STRING,
     Direccion: DataTypes.STRING,
     Latitud: DataTypes.DOUBLE,
     Longitud: DataTypes.DOUBLE,

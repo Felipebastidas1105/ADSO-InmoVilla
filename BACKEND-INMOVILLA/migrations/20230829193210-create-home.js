@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       Codigo_Vivienda: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       Direccion: {
         type: Sequelize.STRING
