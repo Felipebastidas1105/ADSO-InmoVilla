@@ -45,6 +45,7 @@ app.use('/api/v1/contractJointtenants', require('./api/v1/routes/contractJointte
 app.use('/api/v1/requestContractJointtenants', require('./api/v1/routes/requestContractJointtenants.routes'));
 app.use('/api/v1/homeOwners', require('./api/v1/routes/homeOwners.routes'));
 app.use('/api/v1/contractRequest', require('./api/v1/routes/contractRequest.routes'));
+app.use('/api/v1/favorite', require('./api/v1/routes/favorite.routes'));
 
 app.listen(app.get('port'), () => {
     console.log(`Server running on localhost:${app.get('port')}`);
