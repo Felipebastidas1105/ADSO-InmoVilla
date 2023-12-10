@@ -18,10 +18,10 @@ const getAll = async () => {
     }
   }
   
-  const create = async (ServiceId, HomeId) => {
+  const create = async (UserId, HomeId) => {
     try {
       let created = await db.Favorite.create({
-        ServiceId,
+        UserId,
         HomeId
       });
       return created
@@ -30,10 +30,10 @@ const getAll = async () => {
     }
   }
   
-  const update = async (id,ServiceId, HomeId) => {
+  const update = async (id,UserId, HomeId) => {
     try {
       const updated = await db.Favorite.update({
-        ServiceId,
+        UserId,
         HomeId
       },
       {
