@@ -260,7 +260,9 @@ module.exports = {
           Precio: "400000",
           Descripcion: "Chalet elegante con vistas a las montañas en Pereira",
           Imagen: [
-            "https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci84YjNiNTVmNy1mMzI0LTNiNjQtOTNiOS1mOWEyMmIyY2E4MTkvM2JjOGY3YzE2YWQzMDM2M2NkOTVjODI4ZDUxOTQ4OWZiOWRjMmFhZTJhZTNkOWI5MDk1ZTQwZTdiNGQwNzliYi5qcGVnIiwiYnJhbmQiOiJSRVNFTSIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODQwLCJoZWlnaHQiOjYzMCwiZml0IjoiY292ZXIifX19",
+            "https://ventanasenaluminiotecnowindows.com/wp-content/uploads/2018/06/fachadas-de-las-casas-venezolanas.jpg",
+            "https://ventanasenaluminiotecnowindows.com/wp-content/uploads/2018/06/fachadas-de-las-casas-venezolanas.jpg",
+
           ],
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
@@ -287,7 +289,6 @@ module.exports = {
           Precio: "250000",
           Descripcion: "Apartamento moderno con balcón en Barranquilla",
           Imagen: [
-            "https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci84YjNiNTVmNy1mMzI0LTNiNjQtOTNiOS1mOWEyMmIyY2E4MTkvMWY2YzE3ZjZiNDVmZDA5Y2IxZGRjMTg4ZjY5YmUyY2QxNmJiMmU3MGE5NmIzYTAzZWM3Y2QxZTIxYzY0NTRjMi5qcGVnIiwiYnJhbmQiOiJSRVNFTSIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODQwLCJoZWlnaHQiOjYzMCwiZml0IjoiY292ZXIifX19",
             "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
           ],
           Tiene_Garaje_Moto: "Si",
@@ -480,7 +481,8 @@ module.exports = {
           Precio: "200000",
           Descripcion: "Acogedora casa en el corazón de Armenia",
           Imagen: [
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQhhd1XpHTsowYNuEy3h02MEBAqbR78EiJsLxy1dIAf-Oi94LIEDxdOVzt-_8_Ohl7Z0o&usqp=CAU",
+            "https://i.pinimg.com/736x/9b/7b/76/9b7b76f2814d13ec6dcc96ec13c2ad73.jpg",
+            "https://i.pinimg.com/736x/9b/7b/76/9b7b76f2814d13ec6dcc96ec13c2ad73.jpg",
           ],
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "No",
@@ -705,7 +707,6 @@ module.exports = {
             "Esta es una casa de campo ubicada en una zona residencial de manizales",
           Imagen: [
             "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3lvxsYk7gcXhqFLniiI7kwzTIaOBB3Dwaaw&usqp=CAU",
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr46j3vbU7N_CAwrBu7uTNUHYAPf3kLb2C1a-tWfvGMfvI0QVAs-8ymWa64x_Htio2I2o&usqp=CAU",
           ],
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
@@ -789,7 +790,7 @@ module.exports = {
           Descripcion:
             "Esta es una casa de campo ubicada en una zona residencial de manizales",
           Imagen: [
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY8nLkeN_EHcG0ss26jsx46i7BFpXnM22WE1DQwSu2GAcem5FSIoCwbSnF3GQcKS97cN4&usqp=CAU",
+            "https://i.pinimg.com/236x/9f/76/98/9f7698cfc72c53ef2ec6e25a4a237499.jpg",
           ],
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
