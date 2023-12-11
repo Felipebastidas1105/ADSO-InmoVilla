@@ -6,10 +6,10 @@ const roles = require('../../../utils/roles')
 const router = Router()
 
 
-router.get('/', authenticateJWT, authorize([roles["ADMIN"]]), favoriteController.getAll)
-router.get('/:id', authenticateJWT, authorize([roles["ADMIN"]]), favoriteController.get)
-router.post('/', authenticateJWT, authorize([roles["ADMIN"]]),favoriteController.create)
-router.put('/:id', authenticateJWT, authorize([roles["ADMIN"]]),favoriteController.update)
-router.delete('/:id', authenticateJWT, authorize([roles["ADMIN"]]),favoriteController.destroy)
+router.get('/', favoriteController.getAll)
+router.get('/:id', favoriteController.get)
+router.post('/',favoriteController.create)
+router.put('/:id',favoriteController.update)
+router.delete('/:id',favoriteController.destroy)
 
 module.exports = router
