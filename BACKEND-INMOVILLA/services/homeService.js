@@ -31,9 +31,9 @@ const create = async (Codigo_Vivienda,Direccion,
   Tiene_Patio,
   Cant_Baños,
   Precio_Venta,
-  AgentId,
   Estado,
   Amueblado,
+  AgentId,
   TypehousingId,
   TypetargetId
 ) => {
