@@ -150,8 +150,6 @@ module.exports = {
           Imagen: [
             "https://img10.naventcdn.com/avisos/18/00/66/70/80/35/720x532/366100635.jpg",
             "https://img10.naventcdn.com/avisos/18/00/66/70/80/35/720x532/366100635.jpg",
-            "https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzNhMjdjMTg1LWZkYzAtNDczNy04ZDkzLWVkMjRhY2Q5ZjUwMi9hMzc4YzZmNy1kNzYzLTQ0YTctOGFjOS0xNDkzODQ0MmQ5M2YuanBnIiwiYnJhbmQiOiJSRVNFTSIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODQwLCJoZWlnaHQiOjYzMCwiZml0IjoiY292ZXIifX19",
-            "https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJwcm9wZXJ0aWVzLzNhMjdjMTg1LWZkYzAtNDczNy04ZDkzLWVkMjRhY2Q5ZjUwMi9hMzc4YzZmNy1kNzYzLTQ0YTctOGFjOS0xNDkzODQ0MmQ5M2YuanBnIiwiYnJhbmQiOiJSRVNFTSIsImVkaXRzIjp7InJlc2l6ZSI6eyJ3aWR0aCI6ODQwLCJoZWlnaHQiOjYzMCwiZml0IjoiY292ZXIifX19"
           ],
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
@@ -260,9 +258,7 @@ module.exports = {
           Precio: "400000",
           Descripcion: "Chalet elegante con vistas a las montañas en Pereira",
           Imagen: [
-            "https://ventanasenaluminiotecnowindows.com/wp-content/uploads/2018/06/fachadas-de-las-casas-venezolanas.jpg",
-            "https://ventanasenaluminiotecnowindows.com/wp-content/uploads/2018/06/fachadas-de-las-casas-venezolanas.jpg",
-
+            ""
           ],
           Tiene_Garaje_Moto: "Si",
           Tiene_Garaje_Carro: "Si",
@@ -316,7 +312,9 @@ module.exports = {
           Precio: "500000",
           Descripcion: "Casa de playa con acceso directo al mar en Santa Marta",
           Imagen: [
-            "https://img.resemmedia.com/eyJidWNrZXQiOiJwcmQtbGlmdWxsY29ubmVjdC1iYWNrZW5kLWIyYi1pbWFnZXMiLCJrZXkiOiJpbmdlc3Rlci9mMTQ1YTkzMy00OGQyLTNjYWEtOWQ4OC0zYjZlMGJjZWZhY2EvNjk1ZDQ4NjdlM2ZiZDBlNTU5NDdmMTNhZjJlODZkNGVkYjBkZjM4YWQ2YzlmMDY3NjQ2ZGU0NDZlNmExYTNhYS5qcGciLCJicmFuZCI6IlJFU0VNIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4NDAsImhlaWdodCI6NjMwLCJmaXQiOiJjb3ZlciJ9fX0=",
+            "https://res.cloudinary.com/dxnsmwmgv/image/upload/v1699462882/fdwry9u349mfjjl4bnvd.jpg",
+            "https://19a40a38ba.cbaul-cdnwnd.com/cb628410adffd88428b32f51909ad715/200000040-436ab44632/7.jpg",
+
           ],
           Tiene_Garaje_Moto: "No",
           Tiene_Garaje_Carro: "Si",
